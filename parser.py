@@ -1,4 +1,6 @@
 import re
+from production import rule
+
 
 class Rule:
 	def __init__(self, name):
@@ -27,11 +29,16 @@ class List:
 		return iter((self.element, self.separator))
 
 DEBUG = False
+VERBOSE = False
 DEFAULT_DELIM = [' ', '\n', '\t']
+
+if VERBOSE:
+	print_debug = print
+else:
+	print_debug = lambda *args, **kwargs: None
 class Parser:
-	def __init__(self, rules, text, delim=DEFAULT_DELIM):
+	def __init__(self, text, delim=DEFAULT_DELIM):
 		self.index = 0
-		self.rules = rules
 		self.delim = delim
 		self.text = text
 		self.length = len(text)
@@ -77,24 +84,22 @@ class Parser:
 				result = self.parse(separator, degree+1)
 				if result is False:
 					break
-			if DEBUG:print(elements)
 			return elements
 		if not isinstance(goal, Rule):
 			return self.eat(goal)
 		index = self.index
-		for rule in self.rules[goal.get()]:
-			print(" "*degree, "TRYING", rule)
+		for rule, constructor in self.rules[goal.get()]:
+			print_debug(" "*degree, "TRYING", rule)
 			self.index = index
 			tree = []
 			for token in rule:
-				print(" "*degree, "- SEARCH", token)
-				if DEBUG:input()
+				print_debug(" "*degree, "- SEARCH", token)
 				result = self.parse(token, degree+1)
 				if result is False:
 					break
 				tree.append(result)
 			else:
-				return tree
+				return constructor(*tree)
 		return False
 
 
