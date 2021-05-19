@@ -10,6 +10,17 @@ class Node:
 	def add(self, arg):
 		self.args.append(arg)
 		return self
+	def __getitem__(self, key):
+		values = [arg for arg in self.args if isinstance(arg, Node) and arg.type==key]
+		if len(values) == 0:
+			return None
+		elif len(values) == 1:
+			return values[0]
+		return values
+	def keys(self):
+		return set(arg.type for arg in self.args if isinstance(arg, Node))
+	def values(self):
+		return [arg for arg in self.args if not isinstance(arg, Node)]
 	def format(self, tab=''):
 		dec = ' '
 		result = self.type

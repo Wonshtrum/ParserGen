@@ -11,6 +11,7 @@ else:
 class Parser:
 	def __init__(self, text, delim=DEFAULT_DELIM):
 		self.index = 0
+		self.deepest = 0
 		self.delim = delim
 		self.text = text
 		self.length = len(text)
@@ -43,17 +44,22 @@ class Parser:
 			if result is not False or self.head() not in self.delim:
 				return result
 			self.index += 1
+	
+	def reset(self, index=0):
+		if self.index > self.deepest:
+			self.deepest = self.index
+		self.index = index
 
-	def parse(self, goal=Rule("S"), degree=0):
+	def parse(self, goal=Rule("S"), depth=0):
 		if isinstance(goal, List):
 			element, separator = goal
 			elements = []
 			while True:
-				result = self.parse(element, degree+1)
+				result = self.parse(element, depth+1)
 				if result is False:
 					break
 				elements.append(result)
-				result = self.parse(separator, degree+1)
+				result = self.parse(separator, depth+1)
 				if result is False:
 					break
 			return elements
@@ -61,12 +67,12 @@ class Parser:
 			return self.eat(goal)
 		index = self.index
 		for rule, constructor in self.rules[goal.get()]:
-			print_debug(" "*degree, "TRYING", rule)
-			self.index = index
+			print_debug(" "*depth, "TRYING", rule)
+			self.reset(index)
 			tree = []
 			for token in rule:
-				print_debug(" "*degree, "- SEARCH", token)
-				result = self.parse(token, degree+1)
+				print_debug(" "*depth, "- SEARCH", token)
+				result = self.parse(token, depth+1)
 				if result is False:
 					break
 				tree.append(result)
