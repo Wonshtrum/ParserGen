@@ -1,41 +1,13 @@
-import re
+from entities import Rule, Regex, List
+from config import *
 from production import rule
 
-
-class Rule:
-	def __init__(self, name):
-		self.name = name
-	def __repr__(self):
-		return f"Rule('{self.name}')"
-	def get(self):
-		return self.name
-
-class Regex:
-	def __init__(self, pattern):
-		self.pattern = pattern
-		self.expr = re.compile(pattern, re.DOTALL)
-	def match(self, *args, **kwargs):
-		return self.expr.match(*args, **kwargs)
-	def __repr__(self):
-		return f"Regex('{self.pattern}')"
-
-class List:
-	def __init__(self, element, separator):
-		self.element = element
-		self.separator = separator
-	def __repr__(self):
-		return f"List('{self.element}', '{self.separator}')"
-	def __iter__(self):
-		return iter((self.element, self.separator))
-
-DEBUG = False
-VERBOSE = False
-DEFAULT_DELIM = [' ', '\n', '\t']
 
 if VERBOSE:
 	print_debug = print
 else:
 	print_debug = lambda *args, **kwargs: None
+
 class Parser:
 	def __init__(self, text, delim=DEFAULT_DELIM):
 		self.index = 0
@@ -101,9 +73,3 @@ class Parser:
 			else:
 				return constructor(*tree)
 		return False
-
-
-WORD  = Regex("\w+")
-NUM   = Regex("[\+\-]?\d+")
-FLOAT = Regex("[\+\-]?\d+\.\d+")
-SCNUM = Regex("[\+\-]?\d+\.\d+[eE][\+\-]\d+")
