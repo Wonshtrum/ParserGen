@@ -1,8 +1,9 @@
 from parser_gen.grammar_based import *
+from avtpHeaderParser import headerParser
 
 
 BLOB = Regex("[^ ]+")
-class myParser(Parser):
+class coreParser(Parser):
 	@rule("*****", "Solution stored in file:", BLOB, Rule("AVTP1"), Rule("AVTP2"), out="S")
 	def _(_1, _2, fname, avtp1, avtp2):
 		return Node("solution", fname=fname, avtp1=avtp1, avtp2=avtp2)
@@ -26,7 +27,6 @@ class myParser(Parser):
 		return _1
 
 	def skip(self):
-		print(self.index, self.deepest)
 		index = self.text[self.index:].index('\n')
 		if index == -1:
 			self.eof()
@@ -38,12 +38,14 @@ class myParser(Parser):
 if __name__ == "__main__":
 	with open("avtp.out", "r") as f:
 		t = f.read()
-	p = myParser(t)
+	p = coreParser(t, verbose=False)
+	p.add_rules(headerParser)
 	while True:
 		result = p.parse()
-		print(result)
-		input()
 		if result is False:
 			if p.head() is None:
 				break
 			p.skip()
+		else:
+			print(result)
+			input()

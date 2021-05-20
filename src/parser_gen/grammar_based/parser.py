@@ -13,6 +13,13 @@ class Parser:
 		self.length = len(text)
 		self.set_verbose(verbose)
 
+	def add_rules(self, other):
+		for key, value in other.rules.items():
+			if key in self.rules:
+				self.rules[key].extend(value)
+			else:
+				self.rules[key] = value
+
 	def set_verbose(self, verbose):
 		if verbose:
 			self.print = print
@@ -62,16 +69,18 @@ class Parser:
 		if isinstance(goal, List):
 			element, separator = goal
 			elements = []
-			while True:
+			count = 0
+			while count != goal.max:
 				result = self.parse(element, depth+1)
 				if result is False:
 					break
 				if result is not None:
 					elements.append(result)
+					count += 1
 				result = self.parse(separator, depth+1)
 				if result is False:
 					break
-			return elements
+			return elements if count >= goal.min else False
 		if not isinstance(goal, Rule):
 			return self.eat(goal)
 		index = self.index
