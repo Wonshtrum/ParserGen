@@ -58,7 +58,7 @@ class myParser(Parser):
 
 
 if __name__ == "__main__":
-	with open("text", 'r') as f:
+	with open("chem.cti", "r") as f:
 		t = f.read()
 	p = myParser(t)
 	result = p.parse()

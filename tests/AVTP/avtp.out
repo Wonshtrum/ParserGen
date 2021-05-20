@@ -1,0 +1,609 @@
+ 
+ MPL Parallel Library
+ Compute server mode
+ Number of compute processes :            1
+ 
+  ***** Reads input file 'run.params' ...
+ 
+  ***** Iteration controlled run:
+  WARNING: fixed time step used, dtfix =  5.000000000000000E-002
+  ***** Reads file material_database.dat     ...
+ 
+  ***** Reads mesh file : ./MESH/default.mesh.h5
+        --> Coordinates
+        --> Connectivity
+        --> Exterior Boundaries 
+        --> Interior Boundaries 
+ 
+ Namelist asciibound reading
+ Patch number            1  -> WALL_FLUX
+ Patch number            2  -> WALL_ISOT
+ target_origin solutbound           1
+ Patch number            3  -> WALL_FLUX
+ Patch number            4  -> WALL_FLUX
+ Patch number            5  -> WALL_FLUX
+ Patch number            6  -> WALL_FLUX
+ Patch number            7  -> WALL_FLUX
+ Patch number            8  -> WALL_FLUX
+ Patch number            9  -> WALL_FLUX
+ Patch number           10  -> WALL_FLUX
+ Patch number           11  -> WALL_FLUX
+ Patch number           12  -> WALL_FLUX
+ Patch number           13  -> WALL_FLUX
+ Patch number           14  -> WALL_FLUX
+ Patch number           15  -> WALL_FLUX
+ Stop reading at           15
+ End of Namelist asciibound reading
+ 
+        --> Boundaries Target Values
+ 
+  ***** Reads solutBound file : ./SOLUTBOUND/default.solutbound.h5
+ Patch_001:Inlet F
+ Patch_002:Outlet F
+ Patch_003:PerioLeft F
+ Patch_004:PerioRight F
+ Patch_005:WallIn1 F
+ Patch_006:WallIn2 F
+ Patch_007:WallIn3 F
+ Patch_008:MultiperfIn F
+ Patch_009:WallIn4 F
+ Patch_010:InletHole F
+ Patch_011:WallOut F
+ Patch_012:CanyonUp F
+ Patch_013:CanyonBottom F
+ Patch_014:CanyonDown F
+ Patch_015:InletFilm F
+ 
+  ***** Reads file ./record.dat
+        number of probes :           1
+ 
+  ***** Info on initial grid :
+        nnode       :       34684
+        ncell       :      177563
+        nbound      :        9436
+        nint        :           0
+        naxis       :           0
+        iaxi        :           0
+ 
+  ***** After partitioning :
+   ntnode  :       34684
+   ntcell  :      177563
+ 
+ 
+ 
+  ***** Reads initial solution: ./INIT/default.init.h5
+ 
+ Reading... Thermal
+ Reading solution finished!
+ 
+ 
+ ===================================================
+  WARNING : Some parameters of your computation seem
+            to be dangerous...                      
+      ==>   CHECK THE WARNING.TXT FILE              
+ ===================================================
+ 
+ 
+  ***** Total volume of the mesh, smallest cell volume :
+  4.794414857740462E-004  6.466297253616374E-010
+  
+ AVTP                 1  5.000000000000000E-002  5.000000000000000E-002
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000001.h5                     
+
+ AVTP      timeit =   0.675402879714966     
+ AVTP                 2  5.000000000000000E-002  0.100000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000002.h5                     
+
+ AVTP      timeit =   0.636780023574829     
+ AVTP                 3  5.000000000000000E-002  0.150000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000003.h5                     
+
+ AVTP      timeit =   0.628544092178345     
+ AVTP                 4  5.000000000000000E-002  0.200000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000004.h5                     
+
+ AVTP      timeit =   0.629789113998413     
+ AVTP                 5  5.000000000000000E-002  0.250000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000005.h5                     
+
+ AVTP      timeit =   0.632255077362061     
+ AVTP                 6  5.000000000000000E-002  0.300000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000006.h5                     
+
+ AVTP      timeit =   0.629137039184570     
+ AVTP                 7  5.000000000000000E-002  0.350000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000007.h5                     
+
+ AVTP      timeit =    12.7929430007935     
+ AVTP                 8  5.000000000000000E-002  0.400000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000008.h5                     
+
+ AVTP      timeit =   0.640215158462524     
+ AVTP                 9  5.000000000000000E-002  0.450000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000009.h5                     
+
+ AVTP      timeit =   0.597146034240723     
+ AVTP                10  5.000000000000000E-002  0.500000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000010.h5                     
+
+ AVTP      timeit =   0.598015069961548     
+ AVTP                11  5.000000000000000E-002  0.550000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000011.h5                     
+
+ AVTP      timeit =   0.601794958114624     
+ AVTP                12  5.000000000000000E-002  0.600000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000012.h5                     
+
+ AVTP      timeit =   0.597375154495239     
+ AVTP                13  5.000000000000000E-002  0.650000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000013.h5                     
+
+ AVTP      timeit =   0.606137037277222     
+ AVTP                14  5.000000000000000E-002  0.700000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000014.h5                     
+
+ AVTP      timeit =   0.598754167556763     
+ AVTP                15  5.000000000000000E-002  0.750000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000015.h5                     
+
+ AVTP      timeit =   0.602392911911011     
+ AVTP                16  5.000000000000000E-002  0.800000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000016.h5                     
+
+ AVTP      timeit =   0.598923921585083     
+ AVTP                17  5.000000000000000E-002  0.850000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000017.h5                     
+
+ AVTP      timeit =   0.596217155456543     
+ AVTP                18  5.000000000000000E-002  0.900000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000018.h5                     
+
+ AVTP      timeit =   0.567428112030029     
+ AVTP                19  5.000000000000000E-002  0.950000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000019.h5                     
+
+ AVTP      timeit =   0.567215204238892     
+ AVTP                20  5.000000000000000E-002   1.00000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000020.h5                     
+
+ AVTP      timeit =   0.566454887390137     
+ AVTP                21  5.000000000000000E-002   1.05000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000021.h5                     
+
+ AVTP      timeit =   0.567548990249634     
+ AVTP                22  5.000000000000000E-002   1.10000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000022.h5                     
+
+ AVTP      timeit =   0.564851045608521     
+ AVTP                23  5.000000000000000E-002   1.15000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000023.h5                     
+
+ AVTP      timeit =   0.566606998443604     
+ AVTP                24  5.000000000000000E-002   1.20000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000024.h5                     
+
+ AVTP      timeit =   0.590316057205200     
+ AVTP                25  5.000000000000000E-002   1.25000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000025.h5                     
+
+ AVTP      timeit =   0.568688869476318     
+ AVTP                26  5.000000000000000E-002   1.30000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000026.h5                     
+
+ AVTP      timeit =   0.568737030029297     
+ AVTP                27  5.000000000000000E-002   1.35000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000027.h5                     
+
+ AVTP      timeit =   0.574198961257935     
+ AVTP                28  5.000000000000000E-002   1.40000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000028.h5                     
+
+ AVTP      timeit =   0.567919015884399     
+ AVTP                29  5.000000000000000E-002   1.45000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000029.h5                     
+
+ AVTP      timeit =   0.568030118942261     
+ AVTP                30  5.000000000000000E-002   1.50000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000030.h5                     
+
+ AVTP      timeit =   0.573046207427979     
+ AVTP                31  5.000000000000000E-002   1.55000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000031.h5                     
+
+ AVTP      timeit =   0.573357105255127     
+ AVTP                32  5.000000000000000E-002   1.60000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000032.h5                     
+
+ AVTP      timeit =   0.542443037033081     
+ AVTP                33  5.000000000000000E-002   1.65000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000033.h5                     
+
+ AVTP      timeit =   0.545866966247559     
+ AVTP                34  5.000000000000000E-002   1.70000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000034.h5                     
+
+ AVTP      timeit =   0.545102834701538     
+ AVTP                35  5.000000000000000E-002   1.75000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000035.h5                     
+
+ AVTP      timeit =   0.546994924545288     
+ AVTP                36  5.000000000000000E-002   1.80000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000036.h5                     
+
+ AVTP      timeit =   0.537081003189087     
+ AVTP                37  5.000000000000000E-002   1.85000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000037.h5                     
+
+ AVTP      timeit =   0.535521030426025     
+ AVTP                38  5.000000000000000E-002   1.90000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000038.h5                     
+
+ AVTP      timeit =   0.543526172637939     
+ AVTP                39  5.000000000000000E-002   1.95000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000039.h5                     
+
+ AVTP      timeit =   0.538693904876709     
+ AVTP                40  5.000000000000000E-002   2.00000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000040.h5                     
+
+ AVTP      timeit =   0.538230895996094     
+ AVTP                41  5.000000000000000E-002   2.05000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000041.h5                     
+
+ AVTP      timeit =   0.538069963455200     
+ AVTP                42  5.000000000000000E-002   2.10000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000042.h5                     
+
+ AVTP      timeit =   0.544486999511719     
+ AVTP                43  5.000000000000000E-002   2.15000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000043.h5                     
+
+ AVTP      timeit =   0.538398981094360     
+ AVTP                44  5.000000000000000E-002   2.20000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000044.h5                     
+
+ AVTP      timeit =   0.538002014160156     
+ AVTP                45  5.000000000000000E-002   2.25000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000045.h5                     
+
+ AVTP      timeit =   0.537396907806396     
+ AVTP                46  5.000000000000000E-002   2.30000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000046.h5                     
+
+ AVTP      timeit =   0.536552906036377     
+ AVTP                47  5.000000000000000E-002   2.35000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000047.h5                     
+
+ AVTP      timeit =   0.505640029907227     
+ AVTP                48  5.000000000000000E-002   2.40000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000048.h5                     
+
+ AVTP      timeit =   0.511405944824219     
+ AVTP                49  5.000000000000000E-002   2.45000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000049.h5                     
+
+ AVTP      timeit =   0.508481979370117     
+ AVTP                50  5.000000000000000E-002   2.50000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000050.h5                     
+
+ AVTP      timeit =   0.506898164749146     
+ AVTP                51  5.000000000000000E-002   2.55000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000051.h5                     
+
+ AVTP      timeit =   0.511065959930420     
+ AVTP                52  5.000000000000000E-002   2.60000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000052.h5                     
+
+ AVTP      timeit =   0.507673025131226     
+ AVTP                53  5.000000000000000E-002   2.65000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000053.h5                     
+
+ AVTP      timeit =   0.506699085235596     
+ AVTP                54  5.000000000000000E-002   2.70000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000054.h5                     
+
+ AVTP      timeit =   0.507423162460327     
+ AVTP                55  5.000000000000000E-002   2.75000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000055.h5                     
+
+ AVTP      timeit =   0.506128072738647     
+ AVTP                56  5.000000000000000E-002   2.80000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000056.h5                     
+
+ AVTP      timeit =   0.508522987365723     
+ AVTP                57  5.000000000000000E-002   2.85000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000057.h5                     
+
+ AVTP      timeit =   0.506448984146118     
+ AVTP                58  5.000000000000000E-002   2.90000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000058.h5                     
+
+ AVTP      timeit =   0.513010025024414     
+ AVTP                59  5.000000000000000E-002   2.95000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000059.h5                     
+
+ AVTP      timeit =   0.507192850112915     
+ AVTP                60  5.000000000000000E-002   3.00000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000060.h5                     
+
+ AVTP      timeit =   0.505589008331299     
+ AVTP                61  5.000000000000000E-002   3.05000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000061.h5                     
+
+ AVTP      timeit =   0.511442899703979     
+ AVTP                62  5.000000000000000E-002   3.10000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000062.h5                     
+
+ AVTP      timeit =   0.507752895355225     
+ AVTP                63  5.000000000000000E-002   3.15000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000063.h5                     
+
+ AVTP      timeit =   0.507513999938965     
+ AVTP                64  5.000000000000000E-002   3.20000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000064.h5                     
+
+ AVTP      timeit =   0.516347885131836     
+ AVTP                65  5.000000000000000E-002   3.25000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000065.h5                     
+
+ AVTP      timeit =    2.11375498771667     
+ AVTP                66  5.000000000000000E-002   3.30000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000066.h5                     
+
+ AVTP      timeit =   0.517806053161621     
+ AVTP                67  5.000000000000000E-002   3.35000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000067.h5                     
+
+ AVTP      timeit =   0.508586883544922     
+ AVTP                68  5.000000000000000E-002   3.40000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000068.h5                     
+
+ AVTP      timeit =   0.508269071578979     
+ AVTP                69  5.000000000000000E-002   3.45000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000069.h5                     
+
+ AVTP      timeit =   0.511492967605591     
+ AVTP                70  5.000000000000000E-002   3.50000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000070.h5                     
+
+ AVTP      timeit =   0.505821943283081     
+ AVTP                71  5.000000000000000E-002   3.55000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000071.h5                     
+
+ AVTP      timeit =   0.505422830581665     
+ AVTP                72  5.000000000000000E-002   3.60000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000072.h5                     
+
+ AVTP      timeit =   0.506449937820435     
+ AVTP                73  5.000000000000000E-002   3.65000000000000     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000073.h5                     
+
+ AVTP      timeit =   0.475625038146973     
+ AVTP                74  5.000000000000000E-002   3.69999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000074.h5                     
+
+ AVTP      timeit =   0.475543975830078     
+ AVTP                75  5.000000000000000E-002   3.74999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000075.h5                     
+
+ AVTP      timeit =   0.476469993591309     
+ AVTP                76  5.000000000000000E-002   3.79999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000076.h5                     
+
+ AVTP      timeit =   0.483119010925293     
+ AVTP                77  5.000000000000000E-002   3.84999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000077.h5                     
+
+ AVTP      timeit =   0.482038974761963     
+ AVTP                78  5.000000000000000E-002   3.89999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000078.h5                     
+
+ AVTP      timeit =   0.481988191604614     
+ AVTP                79  5.000000000000000E-002   3.94999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000079.h5                     
+
+ AVTP      timeit =   0.482598066329956     
+ AVTP                80  5.000000000000000E-002   3.99999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000080.h5                     
+
+ AVTP      timeit =   0.482899188995361     
+ AVTP                81  5.000000000000000E-002   4.04999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000081.h5                     
+
+ AVTP      timeit =   0.482983112335205     
+ AVTP                82  5.000000000000000E-002   4.09999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000082.h5                     
+
+ AVTP      timeit =   0.477504968643188     
+ AVTP                83  5.000000000000000E-002   4.14999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000083.h5                     
+
+ AVTP      timeit =   0.475646972656250     
+ AVTP                84  5.000000000000000E-002   4.19999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000084.h5                     
+
+ AVTP      timeit =   0.475283861160278     
+ AVTP                85  5.000000000000000E-002   4.24999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000085.h5                     
+
+ AVTP      timeit =   0.477427959442139     
+ AVTP                86  5.000000000000000E-002   4.29999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000086.h5                     
+
+ AVTP      timeit =   0.479933977127075     
+ AVTP                87  5.000000000000000E-002   4.34999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000087.h5                     
+
+ AVTP      timeit =   0.475826978683472     
+ AVTP                88  5.000000000000000E-002   4.39999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000088.h5                     
+
+ AVTP      timeit =   0.475944995880127     
+ AVTP                89  5.000000000000000E-002   4.44999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000089.h5                     
+
+ AVTP      timeit =   0.481005907058716     
+ AVTP                90  5.000000000000000E-002   4.49999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000090.h5                     
+
+ AVTP      timeit =   0.476944923400879     
+ AVTP                91  5.000000000000000E-002   4.54999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000091.h5                     
+
+ AVTP      timeit =   0.481462001800537     
+ AVTP                92  5.000000000000000E-002   4.59999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000092.h5                     
+
+ AVTP      timeit =   0.480896949768066     
+ AVTP                93  5.000000000000000E-002   4.64999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000093.h5                     
+
+ AVTP      timeit =   0.486314058303833     
+ AVTP                94  5.000000000000000E-002   4.69999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000094.h5                     
+
+ AVTP      timeit =   0.478677988052368     
+ AVTP                95  5.000000000000000E-002   4.74999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000095.h5                     
+
+ AVTP      timeit =   0.476324081420898     
+ AVTP                96  5.000000000000000E-002   4.79999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000096.h5                     
+
+ AVTP      timeit =   0.476137161254883     
+ AVTP                97  5.000000000000000E-002   4.84999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000097.h5                     
+
+ AVTP      timeit =   0.476207017898560     
+ AVTP                98  5.000000000000000E-002   4.89999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000098.h5                     
+
+ AVTP      timeit =   0.476183891296387     
+ AVTP                99  5.000000000000000E-002   4.94999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000099.h5                     
+
+ AVTP      timeit =   0.476123809814453     
+ AVTP               100  5.000000000000000E-002   4.99999999999999     
+
+  ***** Solution stored in file: ./RESULTS/SOLUT/default_0000100.h5                     
+
+ AVTP      timeit =   0.475642919540405     
+  
+    ***** Elapsed and CPU-time in seconds AVTP:
+   Total time             :     66.99          906.39
+   Per iteration          :      0.67             9.0639
+   Per iteration and node :   0.1931E-04     0.2613E-03
+   Per iteration and cell :   0.3773E-05     0.5105E-04
+  
+  
+  ***** Final dtsum:    4.99999999999999     
+  
+  ***** Elapsed and CPU-time in seconds AVTP: 
+   Total time             :   66.9889602661133        906.389953613281     
+   Per iteration          :  0.669889602661133        9.06389953613281     
+   Per iteration and node :  1.931408149755313E-005  2.613279764771310E-004
+   Per iteration and cell :  3.772686892320657E-006  5.104610496630949E-005
+  
+ 
+  ***** End of MPL session
+ 
+

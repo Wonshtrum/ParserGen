@@ -3,7 +3,7 @@ class Node:
 		self.type = type
 		self.args = list(args)
 		for key, val in kwargs.items():
-			if hasattr(val, "__iter__"):
+			if hasattr(val, "__iter__") and not isinstance(val, str):
 				self.add(Node(key, *val))
 			else:
 				self.add(Node(key, val))
