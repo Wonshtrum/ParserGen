@@ -59,6 +59,9 @@ class myParser(Parser):
 		return _1
 
 
-with open("text", 'r') as f:
-	t = f.read()
-p = myParser(t)
+if __name__ == "__main__":
+	with open("text", 'r') as f:
+		t = f.read()
+	p = myParser(t)
+	result = p.parse()
+	print(result)

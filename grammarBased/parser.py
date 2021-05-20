@@ -1,6 +1,7 @@
 from entities import Rule, Regex, List
 from config import *
 from production import rule
+import traceback
 
 
 if VERBOSE:
@@ -58,7 +59,8 @@ class Parser:
 				result = self.parse(element, depth+1)
 				if result is False:
 					break
-				elements.append(result)
+				if result is not None:
+					elements.append(result)
 				result = self.parse(separator, depth+1)
 				if result is False:
 					break
@@ -66,7 +68,7 @@ class Parser:
 		if not isinstance(goal, Rule):
 			return self.eat(goal)
 		index = self.index
-		for rule, constructor in self.rules[goal.get()]:
+		for rule, constructor, n in self.rules[goal.get()]:
 			print_debug(" "*depth, "TRYING", rule)
 			self.reset(index)
 			tree = []
@@ -77,5 +79,15 @@ class Parser:
 					break
 				tree.append(result)
 			else:
-				return constructor(*tree)
+				try:
+					if len(tree) == n:
+						return constructor(*tree)
+					return constructor(*tree, self)
+				except Exception as error:
+					if not SMALL_TB:
+						raise error
+					traceback.print_exc()
+					exit(-1)
+
 		return False
+E=[]
