@@ -25,13 +25,25 @@ class myParser(Parser):
 	def _(_1):
 		return _1
 
+	def skip(self):
+		print(self.index, self.deepest)
+		index = self.text[self.index:].index('\n')
+		if index == -1:
+			self.eof()
+			return False
+		self.index += index
+		return True
+
 
 if __name__ == "__main__":
-	with open("sub_avtp.out", "r") as f:
+	with open("avtp.out", "r") as f:
 		t = f.read()
 	p = myParser(t)
-	result = True
-	while result:
+	while True:
 		result = p.parse()
 		print(result)
 		input()
+		if result is False:
+			if p.head() is None:
+				break
+			p.skip()

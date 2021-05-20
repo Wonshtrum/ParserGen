@@ -4,23 +4,30 @@ from .production import rule
 import traceback
 
 
-if VERBOSE:
-	print_debug = print
-else:
-	print_debug = lambda *args, **kwargs: None
-
 class Parser:
-	def __init__(self, text, delim=DEFAULT_DELIM):
+	def __init__(self, text, delim=DEFAULT_DELIM, verbose=VERBOSE):
 		self.index = 0
 		self.deepest = 0
 		self.delim = delim
 		self.text = text
 		self.length = len(text)
+		self.set_verbose(verbose)
+
+	def set_verbose(self, verbose):
+		if verbose:
+			self.print = print
+		else:
+			self.print = lambda *args, **kwargs: None
 	
 	def head(self):
 		if self.index < self.length:
 			return self.text[self.index]
 		return None
+	def skip(self):
+		raise NotImplementedError
+	def eof(self):
+		self.index = self.length
+	
 	
 	def view(self, n=1):
 		return self.text[self.index-n:self.index+n]
@@ -69,11 +76,11 @@ class Parser:
 			return self.eat(goal)
 		index = self.index
 		for rule, constructor, n in self.rules[goal.get()]:
-			print_debug(" "*depth, "TRYING", rule)
+			self.print(" "*depth, "TRYING", rule)
 			self.reset(index)
 			tree = []
 			for token in rule:
-				print_debug(" "*depth, "- SEARCH", token)
+				self.print(" "*depth, "- SEARCH", token)
 				result = self.parse(token, depth+1)
 				if result is False:
 					break
