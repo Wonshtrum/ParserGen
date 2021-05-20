@@ -1,6 +1,6 @@
-from entities import Rule, Regex, List
-from config import *
-from production import rule
+from .entities import Rule, Regex, List
+from .config import *
+from .production import rule
 import traceback
 
 
@@ -90,4 +90,3 @@ class Parser:
 					exit(-1)
 
 		return False
-E=[]

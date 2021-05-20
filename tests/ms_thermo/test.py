@@ -1,6 +1,4 @@
-from parser import *
-from common import *
-from nodes import Node
+from parser_gen.grammar_based import *
 
 class myParser(Parser):
 	@rule("species","(",List(Rule("param"), ","),")", out="S")

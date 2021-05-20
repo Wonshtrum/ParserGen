@@ -1,4 +1,4 @@
-from entities import Regex
+from .entities import Regex
 
 WORD  = Regex("\w+")
 NUM   = Regex("[\+\-]?\d+")

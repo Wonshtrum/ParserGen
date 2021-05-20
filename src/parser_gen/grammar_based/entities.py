@@ -1,4 +1,4 @@
-import re
+from re import compile, DOTALL
 
 class Rule:
 	def __init__(self, name):
@@ -11,7 +11,7 @@ class Rule:
 class Regex:
 	def __init__(self, pattern):
 		self.pattern = pattern
-		self.expr = re.compile(pattern, re.DOTALL)
+		self.expr = compile(pattern, DOTALL)
 	def match(self, *args, **kwargs):
 		return self.expr.match(*args, **kwargs)
 	def __repr__(self):
