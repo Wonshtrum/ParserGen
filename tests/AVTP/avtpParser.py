@@ -27,11 +27,11 @@ class myParser(Parser):
 
 
 if __name__ == "__main__":
-with open("sub_avtp.out", "r") as f:
-	t = f.read()
-p = myParser(t)
-result = True
-while result:
-	result = p.parse()
-	print(result)
-	input()
+	with open("sub_avtp.out", "r") as f:
+		t = f.read()
+	p = myParser(t)
+	result = True
+	while result:
+		result = p.parse()
+		print(result)
+		input()
