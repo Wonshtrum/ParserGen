@@ -5,13 +5,17 @@ import traceback
 
 
 class Parser:
-	def __init__(self, text, delim=DEFAULT_DELIM, verbose=VERBOSE):
+	def __init__(self, text, delim=DEFAULT_DELIM, verbose=VERBOSE, context=None):
 		self.index = 0
 		self.deepest = 0
 		self.delim = delim
 		self.text = text
 		self.length = len(text)
 		self.set_verbose(verbose)
+		if context is None:
+			self.context = self
+		else:
+			self.context = context
 
 	def add_rules(self, other):
 		for key, value in other.rules.items():
@@ -92,13 +96,14 @@ class Parser:
 				self.print(" "*depth, "- SEARCH", token)
 				result = self.parse(token, depth+1)
 				if result is False:
+					self.print(" "*depth, "ABORT")
 					break
 				tree.append(result)
 			else:
 				try:
 					if len(tree) == n:
 						return constructor(*tree)
-					return constructor(*tree, self)
+					return constructor(*tree, self.context)
 				except Exception as error:
 					if not SMALL_TB:
 						raise error
