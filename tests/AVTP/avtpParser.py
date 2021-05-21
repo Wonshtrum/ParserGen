@@ -31,7 +31,7 @@ class coreParser(Parser):
 		if index == -1:
 			self.eof()
 			return False
-		self.index += index
+		self.index += index+1
 		return True
 
 
@@ -48,4 +48,4 @@ if __name__ == "__main__":
 			p.skip()
 		else:
 			print(result)
-			input()
+			input(p.index)
