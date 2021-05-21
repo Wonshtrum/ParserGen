@@ -1,0 +1,21 @@
+ ----> Reading run parameters : ../RUN/run.params
+ ----> Using NATURAL reordering
+
+ ----> command.dat file API is enabled
+
+ ----> Using Lax Wendroff
+       with UNCLOSED boundary terms
+
+ ----> Using colin_species viscosity model
+
+
+ ----> Temporals are activated and full balances are computed
+
+ ----> Using sponge layer(s)
+
+
+        ________________________________________________________________________
+       | Sponge layer:  1                                                      |
+       |    Lowest point:             0.15000E+00   0.50000E-01  -0.80000D-01  |
+       |    Highest point:            0.25000E+00   0.15000E+00   0.80000D-01  |
+       |_______________________________________________________________________|

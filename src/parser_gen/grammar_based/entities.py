@@ -14,6 +14,11 @@ class Regex:
 		self.expr = compile(pattern, DOTALL)
 	def match(self, *args, **kwargs):
 		return self.expr.match(*args, **kwargs)
+	def match_all(self, string):
+		match = self.expr.match(string)
+		if match is None:
+			return False
+		return match.end() == len(string)
 	def __repr__(self):
 		return f"Regex('{self.pattern}')"
 

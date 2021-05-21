@@ -75,14 +75,18 @@ class Parser:
 			elements = []
 			count = 0
 			while count != goal.max:
+				index = self.index
 				result = self.parse(element, depth+1)
 				if result is False:
+					self.reset(index)
 					break
 				if result is not None:
 					elements.append(result)
 					count += 1
+				index = self.index
 				result = self.parse(separator, depth+1)
 				if result is False:
+					self.reset(index)
 					break
 			return elements if count >= goal.min else False
 		if not isinstance(goal, Rule):

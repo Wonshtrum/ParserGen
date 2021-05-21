@@ -1,0 +1,95 @@
+ ----> Reading run parameters : .//run.params
+ ----> Using NATURAL reordering
+
+ ----> command.dat file API is enabled
+
+ ----> Using TTG4A
+       with CLOSED boundary terms
+
+ ----> Using no viscosity model
+
+
+ 
+ >>>>> WARNING
+ >>>>> Temporals are not computed!
+ 
+ 
+ >>>>> WARNING
+ >>>>> You are using PEA chemistry fitting on fuel oxidation and CO-CO2 equilibrium reactions.
+ 
+
+ ----> Reading boundary conditions in asciibound file : ./adiab2colo.asciiBound.key
+        _______________________________________________________________________________________
+       | Boundary patches (no reordering)                                                     |
+       |______________________________________________________________________________________|
+       | Patch number   Patch name                         Boundary condition                 |
+       | ------------   ----------                         ------------------                 |
+       | 1              perio_g                            SYMMETRY                           |
+       | 2              perio_d                            SYMMETRY                           |
+       | 3              wall_pales_diffuseur               SYMMETRY                           |
+       | 4              inlet_kero                         SYMMETRY                           |
+       | 5              chb_film_centrage_ce               SYMMETRY                           |
+       | 6              contt_film_centrage_ce             SYMMETRY                           |
+       | 7              mlp_chb_zring1                     WALL_LAW_MULTIPERF_TARGET_H        |
+       | 8              mlp_contt_zring1                   SYMMETRY                           |
+       | 9              mlp_chb_zring2                     WALL_LAW_MULTIPERF_TARGET_H        |
+       | 10             mlp_contt_zring2                   SYMMETRY                           |
+       | 11             mlp_chb_zring3                     WALL_LAW_MULTIPERF_TARGET_H        |
+       | 12             mlp_contt_zring3                   SYMMETRY                           |
+       | 13             mlp_chb_zring4                     WALL_LAW_MULTIPERF_TARGET_H        |
+       | 14             mlp_contt_zring4                   SYMMETRY                           |
+       | 15             inlet_diffuseur                    SYMMETRY                           |
+       | 16             outlet_chb                         SYMMETRY                           |
+       | 17             mlp_chb_fdc                        WALL_LAW_MULTIPERF_TARGET_H        |
+       | 18             wall_chb_int_film_fdc-vi           WALL_LAW_MULTIPERF_TARGET_H        |
+       | 19             wall_chb_int_film_fdc-ve           WALL_LAW_MULTIPERF_TARGET_H        |
+       | 20             wall_diffuseur                     SYMMETRY                           |
+       | 21             wall_carter                        SYMMETRY                           |
+       | 22             mlp_chb_ve                         WALL_LAW_MULTIPERF_TARGET_H        |
+       | 23             mlp_contt_ve                       SYMMETRY                           |
+       | 24             mlp_chb_film_fdc-ve                WALL_LAW_MULTIPERF_TARGET_H        |
+       | 25             mlp_contt_film_fdc-ve              SYMMETRY                           |
+       | 26             mlp_chb_film_fdc-vi                WALL_LAW_MULTIPERF_TARGET_H        |
+       | 27             mlp_contt_film_fdc-vi              SYMMETRY                           |
+       | 28             mlp_contt_fdc                      SYMMETRY                           |
+       | 29             mlp_chb_vi                         WALL_LAW_MULTIPERF_TARGET_H        |
+       | 30             mlp_contt_vi                       SYMMETRY                           |
+       | 31             mlp_chb_film_sup_ce                WALL_LAW_MULTIPERF_TARGET_H        |
+       | 32             mlp_contt_film_sup_ce              SYMMETRY                           |
+       | 33             mlp_chb_film_ci                    WALL_LAW_MULTIPERF_TARGET_H        |
+       | 34             mlp_contt_film_ci                  SYMMETRY                           |
+       | 35             wall_chb_ce                        WALL_LAW_MULTIPERF_TARGET_H        |
+       | 36             wall_contt_ce                      SYMMETRY                           |
+       | 37             wall_chb_liaison_ve-ce_int_film    WALL_LAW_MULTIPERF_TARGET_H        |
+       | 38             wall_contt_liaison_ve-ce           SYMMETRY                           |
+       | 39             wall_chb_int_film_liaison_ve-ce    WALL_LAW_MULTIPERF_TARGET_H        |
+       | 40             wall_chb_film_sup_ce               WALL_LAW_MULTIPERF_TARGET_H        |
+       | 41             wall_chb_film_centrage_ce          SYMMETRY                           |
+       | 42             wall_contt_film_centrage_ce        SYMMETRY                           |
+       | 43             wall_chb_languette_film_fdc-ve     WALL_LAW_MULTIPERF_TARGET_H        |
+       | 44             wall_contt_film_fdc-ve             SYMMETRY                           |
+       | 45             wall_chb_languette_film_fdc-vi     WALL_LAW_MULTIPERF_TARGET_H        |
+       | 46             wall_contt_film_fdc-vi             SYMMETRY                           |
+       | 47             wall_chb_languette_film_ci         WALL_LAW_MULTIPERF_TARGET_H        |
+       | 48             wall_contt_languette_film_ci       SYMMETRY                           |
+       | 49             wall_chb_int_film_ci               WALL_LAW_MULTIPERF_TARGET_H        |
+       | 50             wall_chb_ci_sup                    WALL_LAW_MULTIPERF_TARGET_H        |
+       | 51             chb_outlet_film_ci                 SYMMETRY                           |
+       | 52             wall_contt_ci_sup                  SYMMETRY                           |
+       | 53             wall_tp-td                         SYMMETRY                           |
+       | 54             wall_contt_si                      SYMMETRY                           |
+       | 55             wall_si_int                        SYMMETRY                           |
+       | 56             wall_si_vrilles                    SYMMETRY                           |
+       | 57             wall_si_outlet                     SYMMETRY                           |
+       | 58             prelev_contt_ci                    SYMMETRY                           |
+       | 59             prelev_contt_ce                    SYMMETRY                           |
+       | 60             wall_sortie_chb                    WALL_LAW_MULTIPERF_TARGET_H        |
+       | 61             wall_plenum_outlet                 SYMMETRY                           |
+       | 62             contt_inlet_film_ci                SYMMETRY                           |
+       | 63             wall_chb_sortie_film_liaison_ve-ce WALL_LAW_MULTIPERF_TARGET_H        |
+       | 64             wall_contt_sortie_film_liaison_ve-cSYMMETRY                           |
+       | 65             wall_contt_ve-ce                   SYMMETRY                           |
+       | 66             wall_chb_ci_inf                    WALL_LAW_MULTIPERF_TARGET_H        |
+       | 67             wall_chb_ve-ce                     WALL_LAW_MULTIPERF_TARGET_H        |
+       | 68             wall_contt_ci_inf                  SYMMETRY                           |
+       |______________________________________________________________________________________|

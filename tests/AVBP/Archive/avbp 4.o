@@ -1,0 +1,44 @@
+ ----> Reading run parameters : ../RUN/run.params
+ ----> Using NATURAL reordering
+
+ ----> command.dat file API is enabled
+
+ ----> Using Lax Wendroff
+       with UNCLOSED boundary terms
+
+ ----> Using colin_species viscosity model
+
+
+ ----> Temporals are activated and full balances are computed
+
+ ----> Using sponge layer(s)
+
+
+        ________________________________________________________________________
+       | Sponge layer:  1                                                      |
+       |    Lowest point:             0.15000E+00   0.50000E-01  -0.80000D-01  |
+       |    Highest point:            0.25000E+00   0.15000E+00   0.80000D-01  |
+       |_______________________________________________________________________|
+
+ ----> Reading boundary conditions in asciibound file : ../MESH/trappedvtx.asciiBound
+        _______________________________________________________________________________________
+       | Boundary patches after reordering                                                    |
+       |______________________________________________________________________________________|
+       | Patch number   Patch name                         Boundary condition                 |
+       | ------------   ----------                         ------------------                 |
+       | 1              Inlet                              INLET_RELAX_RHOUN_T_Y              |
+       | 2              Outlet                             OUTLET_RELAX_P_3D                  |
+       | 3              PerioLeft                          PERIODIC_AXI                       |
+       | 4              PerioRight                         PERIODIC_AXI                       |
+       | 5              WallIn1                            WALL_NOSLIP_ADIAB                  |
+       | 6              WallIn2                            WALL_NOSLIP_ADIAB                  |
+       | 7              WallIn3                            WALL_NOSLIP_ADIAB                  |
+       | 8              MultiperfIn                        WALL_LAW_MULTIPERF_QDM             |
+       | 9              WallIn4                            WALL_NOSLIP_ADIAB                  |
+       | 10             InletHole                          INLET_RELAX_RHOUN_T_Y              |
+       | 11             WallOut                            WALL_NOSLIP_ADIAB                  |
+       | 12             CanyonUp                           WALL_NOSLIP_ADIAB                  |
+       | 13             CanyonBottom                       INLET_FILM                         |
+       | 14             CanyonDown                         WALL_NOSLIP_ADIAB                  |
+       | 15             InletFilm                          INLET_FILM                         |
+       |______________________________________________________________________________________|

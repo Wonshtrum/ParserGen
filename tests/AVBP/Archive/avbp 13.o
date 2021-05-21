@@ -1,0 +1,91 @@
+
+ ----> Reading run parameters : .//run.params
+ ----> Using NATURAL reordering
+
+ ----> command.dat file API is enabled
+
+ ----> Using TTG4A
+       with CLOSED boundary terms
+
+ ----> Using no viscosity model
+ 
+ >>>>> WARNING
+ >>>>> Temporals are not computed!
+ 
+ 
+ >>>>> WARNING
+ >>>>> You are using PEA chemistry fitting on fuel oxidation and CO-CO2 equilibrium reactions.
+ 
+
+ ----> Reading boundary conditions in asciibound file : ./projeteur.asciiBound.key
+
+       ___________________________________________________________________________________
+       | Boundary patches (no reordering)                                                |
+       |_________________________________________________________________________________|
+       | Patch number   Patch name                         Boundary condition            |
+       | ------------   ----------                         ------------------            |
+       | 1              film_ce_1                          NO_BOUNDARY                   |
+       | 2              film_virole_1                      NO_BOUNDARY                   |
+       | 3              inlet_kero                         NO_BOUNDARY                   |
+       | 4              mlp_ce_1                           WALL_LAW_MULTIPERF_TARGET     |
+       | 5              mlp_ce_2                           WALL_LAW_MULTIPERF_TARGET     |
+       | 6              mlp_ce_3                           WALL_LAW_MULTIPERF_TARGET     |
+       | 7              mlp_ce_4                           WALL_LAW_MULTIPERF_TARGET     |
+       | 8              mlp_ce_5                           WALL_LAW_MULTIPERF_TARGET     |
+       | 9              mlp_ce_6                           WALL_LAW_MULTIPERF_TARGET     |
+       | 10             mlp_virole_1                       WALL_LAW_MULTIPERF_TARGET     |
+       | 11             mlp_virole_10                      WALL_LAW_MULTIPERF_TARGET     |
+       | 12             mlp_virole_11                      WALL_LAW_MULTIPERF_TARGET     |
+       | 13             mlp_virole_12                      WALL_LAW_MULTIPERF_TARGET     |
+       | 14             mlp_virole_13                      WALL_LAW_MULTIPERF_TARGET     |
+       | 15             mlp_virole_16                      WALL_LAW_MULTIPERF_TARGET     |
+       | 16             mlp_virole_2                       WALL_LAW_MULTIPERF_TARGET     |
+       | 17             mlp_virole_3                       WALL_LAW_MULTIPERF_TARGET     |
+       | 18             mlp_virole_4                       WALL_LAW_MULTIPERF_TARGET     |
+       | 19             mlp_virole_5                       WALL_LAW_MULTIPERF_TARGET     |
+       | 20             mlp_virole_6                       WALL_LAW_MULTIPERF_TARGET     |
+       | 21             mlp_virole_7                       WALL_LAW_MULTIPERF_TARGET     |
+       | 22             mlp_virole_8                       WALL_LAW_MULTIPERF_TARGET     |
+       | 23             mlp_virole_9                       WALL_LAW_MULTIPERF_TARGET     |
+       | 24             outlet                             NO_BOUNDARY                   |
+       | 25             wall_chambre                       WALL_LAW_MULTIPERF_TARGET     |
+       | 26             wall_fourreau                      NO_BOUNDARY                   |
+       | 27             wall_lumieres                      NO_BOUNDARY                   |
+       | 28             mlp_virole_14                      WALL_LAW_MULTIPERF_TARGET     |
+       | 29             mlp_virole_17                      WALL_LAW_MULTIPERF_TARGET     |
+       | 30             wall_trous_perpendiculaire         NO_BOUNDARY                   |
+       | 31             wall_vrilles_poste10               NO_BOUNDARY                   |
+       | 32             film_ce_1_contt                    NO_BOUNDARY                   |
+       | 33             film_virole_1_contt                NO_BOUNDARY                   |
+       | 34             inlet_diffuseur                    NO_BOUNDARY                   |
+       | 35             mlp_ce_1_contt                     WALL_LAW_MULTIPERF_S          |
+       | 36             mlp_ce_2_contt                     WALL_LAW_MULTIPERF_S          |
+       | 37             mlp_ce_3_contt                     WALL_LAW_MULTIPERF_S          |
+       | 38             mlp_ce_4_contt                     WALL_LAW_MULTIPERF_S          |
+       | 39             mlp_ce_5_contt                     WALL_LAW_MULTIPERF_S          |
+       | 40             mlp_ce_6_contt                     WALL_LAW_MULTIPERF_S          |
+       | 41             mlp_virole_1_contt                 WALL_LAW_MULTIPERF_S          |
+       | 42             mlp_virole_10_contt                WALL_LAW_MULTIPERF_S          |
+       | 43             mlp_virole_11_contt                WALL_LAW_MULTIPERF_S          |
+       | 44             mlp_virole_12_contt                WALL_LAW_MULTIPERF_S          |
+       | 45             mlp_virole_13_contt                WALL_LAW_MULTIPERF_S          |
+       | 46             mlp_virole_14_contt                WALL_LAW_MULTIPERF_S          |
+       | 47             mlp_virole_16_contt                WALL_LAW_MULTIPERF_S          |
+       | 48             mlp_virole_17_contt                WALL_LAW_MULTIPERF_S          |
+       | 49             mlp_virole_2_contt                 WALL_LAW_MULTIPERF_S          |
+       | 50             mlp_virole_3_contt                 WALL_LAW_MULTIPERF_S          |
+       | 51             mlp_virole_4_contt                 WALL_LAW_MULTIPERF_S          |
+       | 52             mlp_virole_5_contt                 WALL_LAW_MULTIPERF_S          |
+       | 53             mlp_virole_6_contt                 WALL_LAW_MULTIPERF_S          |
+       | 54             mlp_virole_7_contt                 WALL_LAW_MULTIPERF_S          |
+       | 55             mlp_virole_8_contt                 WALL_LAW_MULTIPERF_S          |
+       | 56             mlp_virole_9_contt                 WALL_LAW_MULTIPERF_S          |
+       | 57             outlet_prelevement                 NO_BOUNDARY                   |
+       | 58             wall_diffuseur                     NO_BOUNDARY                   |
+       | 59             wall_pales_diffuseur               NO_BOUNDARY                   |
+       | 60             wall_fourreau_bague                NO_BOUNDARY                   |
+       | 61             wall_contt                         WALL_LAW_MULTIPERF_S          |
+       | 62             wall_sortie_diffuseur              NO_BOUNDARY                   |
+       | 63             perio_d_complet                    NO_BOUNDARY                   |
+       | 64             perio_g_complet                    NO_BOUNDARY                   |
+       |_________________________________________________________________________________|

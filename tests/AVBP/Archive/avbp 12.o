@@ -1,0 +1,91 @@
+
+ ----> Reading run parameters : .//run.params
+ ----> Using NATURAL reordering
+
+ ----> command.dat file API is enabled
+
+ ----> Using TTG4A
+       with CLOSED boundary terms
+
+ ----> Using no viscosity model
+ 
+ >>>>> WARNING
+ >>>>> Temporals are not computed!
+ 
+ 
+ >>>>> WARNING
+ >>>>> You are using PEA chemistry fitting on fuel oxidation and CO-CO2 equilibrium reactions.
+ 
+
+ ----> Reading boundary conditions in asciibound file : ./adiab2colo.asciiBound.key
+
+       ___________________________________________________________________________________
+       | Boundary patches (no reordering)                                                |
+       |_________________________________________________________________________________|
+       | Patch number   Patch name                         Boundary condition            |
+       | ------------   ----------                         ------------------            |
+       | 1              film_ce_1                          SYMMETRY                      |
+       | 2              film_virole_1                      SYMMETRY                      |
+       | 3              inlet_kero                         SYMMETRY                      |
+       | 4              mlp_ce_1                           SYMMETRY                      |
+       | 5              mlp_ce_2                           SYMMETRY                      |
+       | 6              mlp_ce_3                           SYMMETRY                      |
+       | 7              mlp_ce_4                           SYMMETRY                      |
+       | 8              mlp_ce_5                           SYMMETRY                      |
+       | 9              mlp_ce_6                           SYMMETRY                      |
+       | 10             mlp_virole_1                       SYMMETRY                      |
+       | 11             mlp_virole_10                      WALL_LAW_MULTIPERF_TARGET_H   |
+       | 12             mlp_virole_11                      WALL_LAW_MULTIPERF_TARGET_H   |
+       | 13             mlp_virole_12                      WALL_LAW_MULTIPERF_TARGET_H   |
+       | 14             mlp_virole_13                      WALL_LAW_MULTIPERF_TARGET_H   |
+       | 15             mlp_virole_16                      WALL_LAW_MULTIPERF_TARGET_H   |
+       | 16             mlp_virole_2                       SYMMETRY                      |
+       | 17             mlp_virole_3                       SYMMETRY                      |
+       | 18             mlp_virole_4                       SYMMETRY                      |
+       | 19             mlp_virole_5                       SYMMETRY                      |
+       | 20             mlp_virole_6                       SYMMETRY                      |
+       | 21             mlp_virole_7                       SYMMETRY                      |
+       | 22             mlp_virole_8                       SYMMETRY                      |
+       | 23             mlp_virole_9                       SYMMETRY                      |
+       | 24             outlet                             SYMMETRY                      |
+       | 25             wall_chambre                       SYMMETRY                      |
+       | 26             wall_fourreau                      SYMMETRY                      |
+       | 27             wall_lumieres                      SYMMETRY                      |
+       | 28             mlp_virole_14                      WALL_LAW_MULTIPERF_TARGET_H   |
+       | 29             mlp_virole_17                      WALL_LAW_MULTIPERF_TARGET_H   |
+       | 30             wall_trous_perpendiculaire         SYMMETRY                      |
+       | 31             wall_vrilles_poste10               SYMMETRY                      |
+       | 32             film_ce_1_contt                    SYMMETRY                      |
+       | 33             film_virole_1_contt                SYMMETRY                      |
+       | 34             inlet_diffuseur                    SYMMETRY                      |
+       | 35             mlp_ce_1_contt                     SYMMETRY                      |
+       | 36             mlp_ce_2_contt                     SYMMETRY                      |
+       | 37             mlp_ce_3_contt                     SYMMETRY                      |
+       | 38             mlp_ce_4_contt                     SYMMETRY                      |
+       | 39             mlp_ce_5_contt                     SYMMETRY                      |
+       | 40             mlp_ce_6_contt                     SYMMETRY                      |
+       | 41             mlp_virole_1_contt                 SYMMETRY                      |
+       | 42             mlp_virole_10_contt                WALL_LAW_MULTIPERF_S_H        |
+       | 43             mlp_virole_11_contt                WALL_LAW_MULTIPERF_S_H        |
+       | 44             mlp_virole_12_contt                WALL_LAW_MULTIPERF_S_H        |
+       | 45             mlp_virole_13_contt                WALL_LAW_MULTIPERF_S_H        |
+       | 46             mlp_virole_14_contt                WALL_LAW_MULTIPERF_S_H        |
+       | 47             mlp_virole_16_contt                WALL_LAW_MULTIPERF_S_H        |
+       | 48             mlp_virole_17_contt                WALL_LAW_MULTIPERF_S_H        |
+       | 49             mlp_virole_2_contt                 SYMMETRY                      |
+       | 50             mlp_virole_3_contt                 SYMMETRY                      |
+       | 51             mlp_virole_4_contt                 SYMMETRY                      |
+       | 52             mlp_virole_5_contt                 SYMMETRY                      |
+       | 53             mlp_virole_6_contt                 SYMMETRY                      |
+       | 54             mlp_virole_7_contt                 SYMMETRY                      |
+       | 55             mlp_virole_8_contt                 SYMMETRY                      |
+       | 56             mlp_virole_9_contt                 SYMMETRY                      |
+       | 57             outlet_prelevement                 SYMMETRY                      |
+       | 58             wall_diffuseur                     SYMMETRY                      |
+       | 59             wall_pales_diffuseur               SYMMETRY                      |
+       | 60             wall_fourreau_bague                SYMMETRY                      |
+       | 61             wall_contt                         SYMMETRY                      |
+       | 62             wall_sortie_diffuseur              SYMMETRY                      |
+       | 63             perio_d_complet                    SYMMETRY                      |
+       | 64             perio_g_complet                    SYMMETRY                      |
+       |_________________________________________________________________________________|

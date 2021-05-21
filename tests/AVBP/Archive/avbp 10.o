@@ -1,0 +1,181 @@
+ AVBP version : V6.2.1 beta
+ 
+  ***** Reads file 'run.dat'
+        TPF Eulerian calculation
+  WARNING: fixed time step used, dtfix =  7.000000000000000E-008
+  ***** Reads file 'input_thermo.dat'
+  ***** Reads file 'input_chem.dat'
+ INFO: Local optimal thickening is applied with   5.0 cells in the flame-front.
+  ***** Reads file 'input_premix.dat'
+  ***** Reads file 'input_species.dat'
+  ***** Reads file 'input_ifp.dat'
+ 
+  ***** Reads file 'input_spongelayer.dat'
+        WARNING: You are using a Spongelayer ...
+  ***** Reads file 'input_shock.dat'
+  ***** Reads file 'input_pea.dat'
+        WARNING : you are using PEA chemistry fitting on fuel oxidation and CO-C
+ O2 equilibrium reactions
+  ***** Reads file 'input_tpf.dat' ...
+        INFO: Two-way coupling between gas and liquid using Stokes drag! 
+              with evaporation
+              with TPF LES model (M. Moreau)
+              with artificial viscosity
+              no clipping on d_l and n_l
+              BUT nl_mini & dl_mini are used for AV
+  ***** Reads file 'input_species_tpf.dat' ...
+  ***** Reads file 'input_average.dat'
+        number of variables :          49
+ 
+  ***** Reads mesh file : ../MESH/mesh.mesh.h5
+        --> Coordinates
+        --> Connectivity
+        --> Exterior Boundaries 
+        --> Interior Boundaries 
+        ---> Periodic nodes 
+ 
+  ***** Reads asciiBound file : ./SOLUTBOUND/perso.asciiBound
+        Patch number            1  -> INLET_RELAX_RHOUN_T_Y
+        Patch number            2  -> INLET_HARD_UVW_T_Y
+        Patch number            3  -> INLET_RELAX_RHOUN_T_Y
+        Patch number            4  -> INLET_FILM
+        Patch number            5  -> INLET_FILM
+        Patch number            6  -> INLET_FILM
+        Patch number            7  -> OUTLET_RELAX_P
+        Patch number            8  -> WALL_LAW_ADIAB
+        Patch number            9  -> WALL_LAW_ADIAB
+        Patch number           10  -> WALL_LAW_ADIAB
+        Patch number           11  -> WALL_LAW_ADIAB
+        Patch number           12  -> WALL_LAW_ADIAB
+        Patch number           13  -> WALL_LAW_ADIAB
+        Patch number           14  -> WALL_LAW_ADIAB
+        Patch number           15  -> WALL_LAW_ADIAB
+        Patch number           16  -> WALL_LAW_ADIAB
+        Patch number           17  -> WALL_LAW_ADIAB
+        Patch number           18  -> WALL_LAW_MULTIPERF_S
+        Patch number           19  -> WALL_LAW_MULTIPERF_S
+        Patch number           20  -> WALL_LAW_MULTIPERF_S
+        Patch number           21  -> WALL_LAW_MULTIPERF_S
+        Patch number           22  -> WALL_LAW_MULTIPERF_S
+        Patch number           23  -> WALL_LAW_MULTIPERF_S
+        Patch number           24  -> WALL_LAW_MULTIPERF_QDM
+        Patch number           25  -> WALL_LAW_MULTIPERF_QDM
+        Patch number           26  -> WALL_LAW_MULTIPERF_QDM
+        Patch number           27  -> WALL_LAW_MULTIPERF_QDM
+        Patch number           28  -> WALL_LAW_MULTIPERF_QDM
+        Patch number           29  -> WALL_LAW_MULTIPERF_QDM
+        Patch number           30  -> WALL_LAW_MULTIPERF_S
+        Patch number           31  -> WALL_LAW_MULTIPERF_S
+        Patch number           32  -> WALL_LAW_MULTIPERF_S
+        Patch number           33  -> WALL_LAW_MULTIPERF_S
+        Patch number           34  -> WALL_LAW_MULTIPERF_S
+        Patch number           35  -> WALL_LAW_MULTIPERF_S
+        Patch number           36  -> WALL_LAW_MULTIPERF_QDM
+        Patch number           37  -> WALL_LAW_MULTIPERF_QDM
+        Patch number           38  -> WALL_LAW_MULTIPERF_QDM
+        Patch number           39  -> WALL_LAW_MULTIPERF_QDM
+        Patch number           40  -> WALL_LAW_MULTIPERF_QDM
+        Patch number           41  -> WALL_LAW_MULTIPERF_QDM
+        Patch number           42  -> WALL_LAW_MULTIPERF_S
+        Patch number           43  -> WALL_LAW_MULTIPERF_S
+        Patch number           44  -> WALL_LAW_MULTIPERF_S
+        Patch number           45  -> WALL_LAW_MULTIPERF_S
+        Patch number           46  -> PERIODIC_AXI
+        Patch number           47  -> PERIODIC_AXI
+ 
+  ***** Reads asciiBound_tpf file : ./SOLUTBOUND/perso.asciiBound_tpf
+        Patch number            1  -> INLET_TPF_RELAX_ALPHA_UN_T
+        Patch number            2  -> INLET_TPF_RELAX_ALPHA_UVW_T
+        Patch number            3  -> WALL_TPF_SLIP
+        Patch number            4  -> INLET_TPF_RELAX_ALPHA_UN_T
+        Patch number            5  -> INLET_TPF_RELAX_ALPHA_UN_T
+        Patch number            6  -> INLET_TPF_RELAX_ALPHA_UN_T
+        Patch number            7  -> OUTLET_TPF
+        Patch number            8  -> WALL_TPF_SLIP
+        Patch number            9  -> WALL_TPF_SLIP
+        Patch number           10  -> WALL_TPF_SLIP
+        Patch number           11  -> WALL_TPF_SLIP
+        Patch number           12  -> WALL_TPF_SLIP
+        Patch number           13  -> WALL_TPF_SLIP
+        Patch number           14  -> WALL_TPF_SLIP
+        Patch number           15  -> WALL_TPF_SLIP
+        Patch number           16  -> WALL_TPF_SLIP
+        Patch number           17  -> WALL_TPF_SLIP
+        Patch number           18  -> OUTLET_TPF
+        Patch number           19  -> WALL_TPF_SLIP
+        Patch number           20  -> WALL_TPF_SLIP
+        Patch number           21  -> WALL_TPF_SLIP
+        Patch number           22  -> WALL_TPF_SLIP
+        Patch number           23  -> WALL_TPF_SLIP
+        Patch number           24  -> INLET_TPF_RELAX_ALPHA_UN_T
+        Patch number           25  -> INLET_TPF_RELAX_ALPHA_UN_T
+        Patch number           26  -> INLET_TPF_RELAX_ALPHA_UN_T
+        Patch number           27  -> INLET_TPF_RELAX_ALPHA_UN_T
+        Patch number           28  -> INLET_TPF_RELAX_ALPHA_UN_T
+        Patch number           29  -> INLET_TPF_RELAX_ALPHA_UN_T
+        Patch number           30  -> OUTLET_TPF
+        Patch number           31  -> WALL_TPF_SLIP
+        Patch number           32  -> WALL_TPF_SLIP
+        Patch number           33  -> WALL_TPF_SLIP
+        Patch number           34  -> WALL_TPF_SLIP
+        Patch number           35  -> WALL_TPF_SLIP
+        Patch number           36  -> INLET_TPF_RELAX_ALPHA_UN_T
+        Patch number           37  -> INLET_TPF_RELAX_ALPHA_UN_T
+        Patch number           38  -> INLET_TPF_RELAX_ALPHA_UN_T
+        Patch number           39  -> INLET_TPF_RELAX_ALPHA_UN_T
+        Patch number           40  -> INLET_TPF_RELAX_ALPHA_UN_T
+        Patch number           41  -> INLET_TPF_RELAX_ALPHA_UN_T
+        Patch number           42  -> OUTLET_TPF
+        Patch number           43  -> OUTLET_TPF
+        Patch number           44  -> OUTLET_TPF
+        Patch number           45  -> OUTLET_TPF
+        Patch number           46  -> PERIODIC_AXI
+        Patch number           47  -> PERIODIC_AXI
+        --> Boundaries Target Values
+ 
+  ***** Reads solutBound file : ./SOLUTBOUND/perso.solutBound.h5
+ 
+  ***** Reads file ./record.dat
+        number of probes :          91
+ 
+  ***** Info on initial grid :
+        nnode       :     3766472
+        ncell       :    21364377
+        nbound      :      410861
+        nint        :       53446
+        naxis       :           0
+        iaxi        :           2
+        nbound_mlpf :           0
+        ncgroup     :         100
+ 
+  ***** Partitioning algorithm : RIB
+        Number of domains      :        1000
+ 
+ 
+  ***** After partitioning :
+        ntnode  :     4787341
+        ntcell  :    21364377
+ 
+  ***** CPU-time for partitioning in seconds :    0.1475E+03
+ 
+  ***** Max. memory for partitioning in Mb :      0.1751E+04
+ 
+ 
+  ***** Reads initial solution : ./INIT/init.h5
+ 
+  ***** Info on initial solution :
+        number of dimensions              :           3
+        number of Navier-Stokes equations :           5
+        number of species                 :           6
+        number of reactions               :           2
+        number of tpf equations           :           8
+        number of fictive species         :           0
+ 
+        initial iteration                 :     2874698
+        initial time                      :  0.194288787541150     
+ 
+  ***** Run information :
+        iprint    :           1
+        nprint    :          50
+        istoreadd :           0
+ 

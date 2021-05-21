@@ -1,0 +1,37 @@
+
+ ----> Reading run parameters : .//run.params
+ ----> Using NATURAL reordering
+
+ ----> command.dat file API is disabled
+
+ ----> Using TTG4A
+    >> with CLOSED boundary terms
+
+ 
+ >>>>> WARNING
+ >>>>> Temporals are not computed!
+ 
+
+ ----> Reading boundary conditions in asciibound file : ./adiab2colo.asciiBound.key
+
+       ___________________________________________________________________________________
+       | Boundary patches (no reordering)                                                |
+       |_________________________________________________________________________________|
+       | Patch number   Patch name                         Boundary condition            |
+       | ------------   ----------                         ------------------            |
+       | 1              Inlet                              SYMMETRY                      |
+       | 2              Outlet                             SYMMETRY                      |
+       | 3              PerioLeft                          SYMMETRY                      |
+       | 4              PerioRight                         SYMMETRY                      |
+       | 5              WallIn1                            SYMMETRY                      |
+       | 6              WallIn2                            SYMMETRY                      |
+       | 7              WallIn3                            WALL_LAW_MULTIPERF_TARGET_H   |
+       | 8              MultiperfIn                        WALL_LAW_MULTIPERF_TARGET_H   |
+       | 9              WallIn4                            SYMMETRY                      |
+       | 10             InletHole                          SYMMETRY                      |
+       | 11             WallOut                            SYMMETRY                      |
+       | 12             CanyonUp                           SYMMETRY                      |
+       | 13             CanyonBottom                       SYMMETRY                      |
+       | 14             CanyonDown                         SYMMETRY                      |
+       | 15             InletFilm                          SYMMETRY                      |
+       |_________________________________________________________________________________|
