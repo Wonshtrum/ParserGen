@@ -1,5 +1,6 @@
 from sys import stderr
 
+
 def rule(*args, out="S"):
 	class deco:
 		def __init__(self, f):
@@ -16,4 +17,5 @@ def rule(*args, out="S"):
 			owner.rules = rule.tmp
 			rule.tmp = {}
 	return deco
+
 rule.tmp = {}

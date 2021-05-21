@@ -1,5 +1,6 @@
 from parser_gen.grammar_based import *
 
+
 class myParser(Parser):
 	@rule("species","(",List(Rule("param"), ","),")", out="S")
 	def _(_1, _2, l, _3):
@@ -60,6 +61,10 @@ class myParser(Parser):
 if __name__ == "__main__":
 	with open("chem.cti", "r") as f:
 		t = f.read()
-	p = myParser(t)
-	result = p.parse()
-	print(result)
+	p = myParser(t, verbose=False)
+	while True:
+		result = p.parse()
+		if result is False:
+			break
+		print(result)
+		input(p.index)

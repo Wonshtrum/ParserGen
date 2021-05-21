@@ -7,9 +7,11 @@ class Node:
 				self.add(Node(key, *val))
 			else:
 				self.add(Node(key, val))
+
 	def add(self, arg):
 		self.args.append(arg)
 		return self
+
 	def __getitem__(self, key):
 		values = [arg for arg in self.args if isinstance(arg, Node) and arg.type==key]
 		if len(values) == 0:
@@ -21,7 +23,8 @@ class Node:
 		return set(arg.type for arg in self.args if isinstance(arg, Node))
 	def values(self):
 		return [arg for arg in self.args if not isinstance(arg, Node)]
-	def format(self, tab=''):
+
+	def _format(self, tab=''):
 		dec = ' '
 		result = self.type
 		for i, arg in enumerate(self.args):
@@ -34,9 +37,9 @@ class Node:
 				pad = '│'
 			result += dec
 			if isinstance(arg, Node):
-				result += arg.format(tab+pad+dec)
+				result += arg._format(tab+pad+dec)
 			else:
 				result += str(arg)
 		return result
 	def __repr__(self):
-		return self.format()
+		return self._format()

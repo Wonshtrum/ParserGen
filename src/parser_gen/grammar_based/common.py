@@ -1,6 +1,7 @@
 from .entities import Regex
 
-WORD  = Regex("\w+")
-NUM   = Regex("[\+\-]?\d+")
-FLOAT = Regex("[\+\-]?\d+\.\d+")
-SCNUM = Regex("[\+\-]?\d+\.\d+[eE][\+\-]\d+")
+
+WORD  = Regex("\w+", "WORD")
+NUM   = Regex("[\+\-]?\d+", "NUM")
+FLOAT = Regex("[\+\-]?\d+\.\d+", "FLOAT")
+SCNUM = Regex("[\+\-]?\d+\.\d+[eE][\+\-]\d+", "SCNUM")

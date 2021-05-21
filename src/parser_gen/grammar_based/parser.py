@@ -38,8 +38,6 @@ class Parser:
 		raise NotImplementedError
 	def eof(self):
 		self.index = self.length
-	
-	
 	def view(self, n=1):
 		return self.text[self.index-n:self.index+n]
 
@@ -68,8 +66,7 @@ class Parser:
 		if self.index > self.deepest:
 			self.deepest = self.index
 		self.index = index
-
-	def autoReset(f):
+	def _autoReset(f):
 		def wrapper(self, *args, **kwargs):
 			index = self.index
 			result = f(self, *args, **kwargs)
@@ -78,25 +75,21 @@ class Parser:
 			return result
 		return wrapper
 
-	@autoReset
+	@_autoReset
 	def parse(self, goal=Rule("S"), depth=0):
 		if isinstance(goal, List):
 			element, separator = goal
 			elements = []
 			count = 0
 			while count != goal.max:
-				#index = self.index
 				result = self.parse(element, depth+1)
 				if result is False:
-					#self.reset(index)
 					break
 				if result is not None:
 					elements.append(result)
 					count += 1
-				#index = self.index
 				result = self.parse(separator, depth+1)
 				if result is False:
-					#self.reset(index)
 					break
 			return elements if count >= goal.min else False
 		if not isinstance(goal, Rule):
