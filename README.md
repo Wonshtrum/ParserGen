@@ -1,5 +1,5 @@
 # ParserGen
-Developpment of a parser generator tools.
+Developpment of parser generator tools.
 The goal is to create a solid base to build efficient log parsers.
 
 ## GrammarBased

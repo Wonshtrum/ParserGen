@@ -54,4 +54,5 @@ if __name__ == "__main__":
 			p.skip()
 		else:
 			print(result)
+			print(result.to_dict())
 			input(p.index)

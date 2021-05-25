@@ -67,4 +67,5 @@ if __name__ == "__main__":
 		if result is False:
 			break
 		print(result)
+		print(result.to_dict())
 		input(p.index)
