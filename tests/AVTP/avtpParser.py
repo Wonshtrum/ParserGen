@@ -17,14 +17,11 @@ class coreParser(Parser):
 		return a, b, c
 
 	@rule(SCNUM, out="number")
-	def _(_1):
-		return _1
+	def _(_1): return _1
 	@rule(FLOAT, out="number")
-	def _(_1):
-		return _1
+	def _(_1): return _1
 	@rule(NUM, out="number")
-	def _(_1):
-		return _1
+	def _(_1): return _1
 
 	def skip(self):
 		index = self.text[self.index:].index('\n')
@@ -42,7 +39,7 @@ if __name__ == "__main__":
 	p.add_rules(headerParser)
 	while True:
 		result = p.parse()
-		if result is False:
+		if result is TokenNotFound:
 			if p.head() is None:
 				break
 			p.skip()

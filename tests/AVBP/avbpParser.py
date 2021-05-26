@@ -14,14 +14,14 @@ class coreParser(Parser):
 
 	@rule("|", LINE, "|", out="sep")
 	def _(_1, v, _2):
-		return True
+		return None
 
 	@rule("|", List(BLOB), "|", out="title")
 	def _(_1, v, _2):
 		return " ".join(v)
 	@rule("|", LINE, "|", out="line")
 	def _(_1, v, _2):
-		return False
+		return TokenNotFound
 	@rule("|", List(BLOB), ":", List(BLOB), "|", out="line")
 	def _(_1, k, _2, v, _3):
 		k = " ".join(k)
@@ -30,7 +30,7 @@ class coreParser(Parser):
 	@rule("|", List(BLOB), "|", out="line")
 	def _(_1, l, _2):
 		if not l or all(UNDERLINE.match_all(_) for _ in l):
-			return None
+			return IgnoreToken
 		return l
 
 	def skip(self):
@@ -48,7 +48,7 @@ if __name__ == "__main__":
 	p = coreParser(t, verbose=False)
 	while True:
 		result = p.parse()
-		if result is False:
+		if result is TokenNotFound:
 			if p.head() is None:
 				break
 			p.skip()

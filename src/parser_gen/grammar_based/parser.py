@@ -4,6 +4,12 @@ from .production import rule
 import traceback
 
 
+class TokenNotFound:
+	pass
+class IgnoreToken:
+	pass
+
+
 class Parser:
 	def __init__(self, text, delim=DEFAULT_DELIM, verbose=VERBOSE, context=None):
 		self.index = 0
@@ -39,13 +45,13 @@ class Parser:
 	def eof(self):
 		self.index = self.length
 	def view(self, n=1):
-		return self.text[self.index-n:self.index+n]
+		return self.text[max(0,self.index-n):self.index+n]
 
 	def _eat(self, token):
 		if isinstance(token, Regex):
 			match = token.match(self.text[self.index:])
 			if match is None:
-				return False
+				return TokenNotFound
 			self.index += match.end()
 			return match.group()
 		if not isinstance(token, str):
@@ -54,11 +60,11 @@ class Parser:
 		if self.text[self.index:self.index+length] == token:
 			self.index += length
 			return token
-		return False
+		return TokenNotFound
 	def eat(self, token):
 		while True:
 			result = self._eat(token)
-			if result is not False or self.head() not in self.delim:
+			if result is not TokenNotFound or self.head() not in self.delim:
 				return result
 			self.index += 1
 	
@@ -70,7 +76,7 @@ class Parser:
 		def wrapper(self, *args, **kwargs):
 			index = self.index
 			result = f(self, *args, **kwargs)
-			if result is False:
+			if result is TokenNotFound:
 				self.reset(index)
 			return result
 		return wrapper
@@ -83,15 +89,15 @@ class Parser:
 			count = 0
 			while count != goal.max:
 				result = self.parse(element, depth+1)
-				if result is False:
+				if result is TokenNotFound:
 					break
-				if result is not None:
+				if result is not IgnoreToken:
 					elements.append(result)
 					count += 1
 				result = self.parse(separator, depth+1)
-				if result is False:
+				if result is TokenNotFound:
 					break
-			return elements if count >= goal.min else False
+			return elements if count >= goal.min else TokenNotFound
 		if not isinstance(goal, Rule):
 			return self.eat(goal)
 		index = self.index
@@ -102,7 +108,7 @@ class Parser:
 			for token in rule:
 				self.print(" "*depth, "- SEARCH", token)
 				result = self.parse(token, depth+1)
-				if result is False:
+				if result is TokenNotFound:
 					self.print(" "*depth, "ABORT")
 					break
 				tree.append(result)
@@ -117,4 +123,4 @@ class Parser:
 					traceback.print_exc()
 					exit(-1)
 
-		return False
+		return TokenNotFound

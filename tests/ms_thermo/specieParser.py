@@ -24,17 +24,13 @@ class myParser(Parser):
 		return Node(k, v)
 
 	@rule(Rule("number"), out="value")
-	def _(_1):
-		return _1
+	def _(_1): return _1
 	@rule('"',WORD,'"', out="value")
-	def _(_1, v, _2):
-		return v
+	def _(_1, v, _2): return v
 	@rule("'",WORD,"'", out="value")
-	def _(_1, v, _2):
-		return v
+	def _(_1, v, _2): return v
 	@rule("‘",WORD,"’", out="value")
-	def _(_1, v, _2):
-		return v
+	def _(_1, v, _2): return v
 
 	@rule(WORD,":",Rule("number"), out="atom")
 	def _(k, _1, v):
@@ -48,14 +44,11 @@ class myParser(Parser):
 		return v
 
 	@rule(SCNUM, out="number")
-	def _(_1):
-		return _1
+	def _(_1): return _1
 	@rule(FLOAT, out="number")
-	def _(_1):
-		return _1
+	def _(_1): return _1
 	@rule(NUM, out="number")
-	def _(_1):
-		return _1
+	def _(_1): return _1
 
 
 if __name__ == "__main__":
@@ -64,7 +57,7 @@ if __name__ == "__main__":
 	p = myParser(t, verbose=False)
 	while True:
 		result = p.parse()
-		if result is False:
+		if result is TokenNotFound:
 			break
 		print(result)
 		print(result.to_dict())
