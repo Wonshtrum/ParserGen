@@ -2,9 +2,6 @@ from parser_gen.grammar_based import *
 
 
 class myParser(Parser):
-	@rule(Rule("dict"), out="S")
-	def _(_1): return _1
-
 	@rule('"', STRING, '"', out="string")
 	def _(_1, v, _2):
 		return v
@@ -22,23 +19,17 @@ class myParser(Parser):
 		return l
 
 	@rule(SCNUM, out="number")
-	def _(_1):
-		return eval(_1)
 	@rule(FLOAT, out="number")
-	def _(_1):
-		return float(_1)
 	@rule(NUM, out="number")
-	def _(_1):
-		return int(_1)
+	def _(_1): return eval(_1)
 
+	@rule(Rule("dict"), out="S")
 	@rule(Rule("number"), out="element")
-	def _(_1): return _1
 	@rule(Rule("string"), out="element")
-	def _(_1): return _1
 	@rule(Rule("dict"), out="element")
-	def _(_1): return _1
 	@rule(Rule("list"), out="element")
 	def _(_1): return _1
+
 	@rule("true", out="element")
 	def _(_1): return True
 	@rule("false", out="element")
@@ -54,4 +45,3 @@ if __name__ == "__main__":
 		if result is TokenNotFound:
 			break
 		print(result)
-		input(p.index)
