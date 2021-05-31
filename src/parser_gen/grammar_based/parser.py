@@ -41,7 +41,12 @@ class Parser:
 			return self.text[self.index]
 		return None
 	def skip(self):
-		raise NotImplementedError
+		index = self.text[self.index:].index('\n')
+		if index == -1:
+			self.eof()
+			return False
+		self.index += index+1
+		return True
 	def eof(self):
 		self.index = self.length
 	def view(self, n=1):
@@ -124,3 +129,10 @@ class Parser:
 					exit(-1)
 
 		return TokenNotFound
+
+	def extract(self, goal=Rule("S")):
+		while p.head() is not None:
+			result = p.parse(goal)
+			if result is not TokenNotFound:
+				yield result
+			p.skip()
