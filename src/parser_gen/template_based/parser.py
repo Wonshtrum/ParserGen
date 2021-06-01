@@ -49,9 +49,10 @@ class Parser:
 			matches = re.findall(block, text)
 			if n == 1:
 				matches = [(_,) for _ in matches]
-			print(matches)
-			for ((name, processor), values) in zip(variables, zip(*matches)):
-				if values:
+			matches = list(zip(*matches))
+			for i, (name, processor) in enumerate(variables):
+				if matches:
+					values = matches[i]
 					if evaluate and processor is not None:
 						output[name] = list(map(processor, values))
 					else:
