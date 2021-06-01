@@ -27,4 +27,4 @@ AVTP                 2  5.000000000000000E-002  0.100000000000000
        Final timestep  :   {{iteration:float}}
 
 (...)
-AVBP CRASHED AFTER {{iterations:int}} iterations!
+AVBP CRASHED AFTER {{iteration_error:int}} iterations!
