@@ -131,8 +131,8 @@ class Parser:
 		return TokenNotFound
 
 	def extract(self, goal=Rule("S")):
-		while p.head() is not None:
-			result = p.parse(goal)
+		while self.head() is not None:
+			result = self.parse(goal)
 			if result is not TokenNotFound:
 				yield result
-			p.skip()
+			self.skip()
