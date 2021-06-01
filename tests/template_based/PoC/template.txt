@@ -1,0 +1,30 @@
+(...)
+Using branch  : {{branch}}
+Version date  : {{Date}}
+Last commit   : {{commit}}
+(...)
+Computation #1/1
+
+ACME version : {{name}}
+
+(...)
+ ***** Solution stored in file: {{file}}
+AVTP      timeit =   {{timeit:float}}
+AVTP                 2  5.000000000000000E-002  0.100000000000000
+(...)
+       _____________________________________________________________________________________________
+       | 20 MPI tasks             Elapsed real time [s]       [s.cores]      [h.cores]             |
+       |___________________________________________________________________________________________|
+       | AVBP                   :    {{total:float}}         0.1444E+05     0.4011E+01             |
+       | Temporal loop          :  {{temporal_loop:float}}   0.1438E+05     0.3995E+01             |
+       | Per iteration          :       0.0298               0.5963E+00                            |
+       | Per iteration and node :   0.8596E-06               0.1719E-04                            |
+       | Per iteration and cell :   0.1679E-06               0.3358E-05                            |
+       |___________________________________________________________________________________________|
+(...)
+ ----> Final dtsum     :   {{dtsum:float}}
+       Final iteration : 40232
+       Final timestep  :   {{iteration:float}}
+
+(...)
+AVBP CRASHED AFTER {{iterations:int}} iterations!

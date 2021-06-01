@@ -1,0 +1,34 @@
+Using branch  : D7_0
+Version date  : Mon Jan 5 22:03:30 2015 +0100
+Last commit   : 9ae0dd172d8145496e8d62f8bd34f25ae2595956
+
+Computation #1/1
+
+ACME version : 7.0 beta
+
+ ***** Solution stored in file: ./RESULTS/SOLUT/default_0000001.h5
+AVTP      timeit =   0.675402879714966
+AVTP                 2  5.000000000000000E-002  0.100000000000000
+ ***** Solution stored in file: ./RESULTS/SOLUT/default_0000002.h5
+AVTP      timeit =   0.636780023574829
+AVTP                 3  5.000000000000000E-002  0.150000000000000
+ ***** Solution stored in file: ./RESULTS/SOLUT/default_0000003.h5
+AVTP      timeit =   0.628544092178345
+AVTP                 4  5.000000000000000E-002  0.200000000000000
+ ***** Solution stored in file: ./RESULTS/SOLUT/default_0000004.h5
+AVTP      timeit =   0.629789113998413
+AVTP                 5  5.000000000000000E-002  0.250000000000000
+
+       _____________________________________________________________________________________________
+       | 20 MPI tasks             Elapsed real time [s]       [s.cores]      [h.cores]             |
+       |___________________________________________________________________________________________|
+       | AVBP                   :       722.02               0.1444E+05     0.4011E+01             |
+       | Temporal loop          :       719.18               0.1438E+05     0.3995E+01             |
+       | Per iteration          :       0.0298               0.5963E+00                            |
+       | Per iteration and node :   0.8596E-06               0.1719E-04                            |
+       | Per iteration and cell :   0.1679E-06               0.3358E-05                            |
+       |___________________________________________________________________________________________|
+
+ ----> Final dtsum     :   0.50000407E-01
+       Final iteration : 40232
+       Final timestep  :   0.12438612E-05
