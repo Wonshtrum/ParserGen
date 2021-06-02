@@ -1,0 +1,135 @@
+! Full input file with optional parameters !
+ 
+$RUN-CONTROL
+  solver_type = ns
+  wall_clock_time_limit = 1.19166667D+01
+  diffusion_scheme = FE_2delta
+  simulation_end_time = 75.0d-3
+  !simulation_end_iteration = 1000
+  mixture_name = CH4_18_444_12_DL
+  !fixed_timestep = 0.9d-8
+  reactive_flow = yes
+  combustion_model = TF 
+  two_phase_flow = no
+  real_gas = no
+  LES_model = sigma
+  prandtl_turb =   0.60000000D+00
+  schmidt_turb =   0.60000000D+00
+  convection_scheme = LW
+  CFL =   0.70000000D+00
+  Fourier =   0.10000000D+00
+  artificial_viscosity_model = colin_species
+  artificial_viscosity_2nd_order =   0.50000000D-01
+  artificial_viscosity_4th_order =   0.50000000D-02
+  compute_chemical_timestep = no !yes
+$end_RUN-CONTROL
+ 
+ 
+$INPUT-CONTROL
+  mesh_file = ../MESH/10M.mesh.h5
+  asciibound_file = ../MESH/10M.asciiBound
+  solutbound_file = ../SOLUTBOUND/10M.solutBound.h5
+  initial_solution_file = ././SOLUT/solut_00000048_end.h5
+  probe_file = ./record.dat
+  species_database = ./species_database.dat
+  mixture_database = ./mixture_database.dat_ARC
+$end_INPUT-CONTROL
+ 
+$OUTPUT-CONTROL
+  save_solution = yes
+  save_solution.time = 1.0d-3
+  !save_solution.iteration = 200
+  save_solution.name = ./SOLUT/solut
+  save_solution.additional = medium
+  save_temporal = yes
+  save_temporal.balance = yes
+  !save_temporal.iteration = 100
+  save_temporal.time = 0.1d-4
+  save_temporal.dirname = ./start_it_01257155
+  save_average = yes
+  !save_average.iteration = 200
+  save_average.time = 2.0d-3
+  save_average.freq_averaging.time = 0.5d-3
+  save_average.name = ./AVE/ave
+  save_average.mode = packages
+  save_average.packages = NS_rms species_rms reac_rms like
+!  save_average.user_variable = thick
+$end_OUTPUT-CONTROL
+ 
+ 
+$HPC-DEBUG
+  ncell_group = 100
+  partitioner = parmetis
+  reordering_method = natural
+  io_stats = no
+  use_el2part = yes
+  check_el2part_consistency = no
+  timers = no
+  check_solution = no
+  debug_level = 0
+  debug_processor = master
+  auto_reorder_boundary_patch = yes
+$end_HPC-DEBUG
+ 
+ 
+$POSTPROC
+  postproc.activate = no
+  postproc.dirname = ./SLICES
+  cut_planar.name = Cuth15mm
+  cut_planar.average = yes
+  cut_planar.origin = 15.0d-3 0d0 0d0
+  cut_planar.normal = 1.0d0 0.0d0 1.0d0
+  cut_planar.save.time = 2.0d-3
+  cut_planar.name = Cuth35mm
+  cut_planar.average = yes
+  cut_planar.origin = 35.0d-3 0d0 0d0
+  cut_planar.normal = 1.0d0 0.0d0 0.0d0
+  cut_planar.save.time = 2.0d-3
+$end_POSTPROC
+
+$FICTIVE-SPECIES
+  fictive_species.activate = yes
+  fictive_species.name = psific
+  fictive_species.Schmidt = 0.2D0
+$end_FICTIVE-SPECIES
+
+$THICKENED-FLAME-MODEL
+  thickening_type = dynamic
+  thickening_npoints = 5.0d0
+  dyn_thickening.takeno_sensor = no
+  dyn_thickening.sensor = relaxation !classical
+  efficiency_model = Charlette
+  efficiency_constant = 0.5d0
+  wall_damping = yes
+
+  tabulation_variable = phi
+  tabulation_table = 6.0000D-01 6.5000D-01 7.0000D-01 7.5000D-01 8.0000D-01 8.5000D-01 9.0000D-01 9.5000D-01 1.0000D+00 1.0500D+00 1.1000D+00 1.1500D+00 1.2000D+00 1.2500D+00 1.3000D+00 1.3500D+00 1.4000D+00 1.4500D+00 1.5000D+00 1.5500D+00 1.6000D+00
+
+! efficiency model and parameters
+  flame_thickness = 1.0806D-03 8.2847d-04 6.8615d-04 5.9447d-04 5.3498d-04 4.9465d-04 4.6792d-04 4.4849d-04 4.3566d-04 4.2725d-04 4.2358d-04 4.2760d-04 4.4536d-04 4.8352d-04 5.5153d-04 6.6173d-04 8.1760d-04 1.0160d-03 1.2133d-03 1.4037d-03 1.5997d-03
+
+  flame_speed = 9.3769D-02 1.3236d-01 1.7239d-01 2.1274d-01 2.5057d-01 2.8527d-01 3.1591d-01 3.4116d-01 3.5913d-01 3.6909d-01 3.6948d-01 3.5992d-01 3.3771d-01 3.0284d-01 2.5762d-01 2.0854d-01 1.6488d-01 1.2982d-01 1.0708d-01 9.1404d-02 7.9569d-02
+
+  dyn_thickening.omega0 = 1.3352D+01 2.3927d+01 3.7625d+01 5.4537d+01 7.3472d+01 9.3572d+01 1.1352d+02 1.3240d+02 1.4803d+02 1.5881d+02 1.6302d+02 1.5952d+02 1.4645d+02 1.2423d+02 9.5980d+01 6.7645d+01 4.5029d+01 2.9620d+01 2.1078d+01 1.5932d+01 1.2381d+01
+
+
+  !dyn_thickening.omega0 = 1.2261D02
+
+! espece pour le senseur et espece fictive pour la relaxation
+  dyn_thickening.relaxation.speciesname = CH4
+  dyn_thickening.relaxation.fictivename = psific
+
+! parameters that need to be tuned
+  dyn_thickening.relaxation.alphahot = 0.02D0
+  dyn_thickening.relaxation.alphacold = 0.18D0
+
+!valeurs recommandes
+  dyn_thickening.relaxation.threshold = 10d0
+  dyn_thickening.relaxation.Tswitch = 1600d0
+  dyn_thickening.relaxation.psi0 = 20d0
+
+! efficiency model and parameters
+!  flame_thickness = 4.4491D-04
+!  flame_speed = 3.7069D-01
+$end_THICKENED-FLAME-MODEL
+

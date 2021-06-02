@@ -1,0 +1,37 @@
+(...)
+Eilmer {{version}} compressible-flow simulation code.
+Revision: {{revision}}
+Compiler-name: {{compiler_name}}
+Build-flavour: {{build_flavour}}
+Capabilities: {{capabilities}}
+Parallelism: {{parallelism}}
+
+(...)
+Begin simulation with command-line arguments.
+  jobName: {{job_name}}
+  tindxStart: {{tindx_start:int}}
+  maxWallClock: {{max_wall_clock:int}}
+  verbosityLevel: {{verbose_level:int}}
+  threadsPerMPITask: {{threads_per_MPI_task:int}}
+
+(...)
+MPI-task with rank {{rank_id:int}} running with {{threads_for_rank:int}} threads.
+
+(...)
+Heap memory used for task {{task_id:int}}: {{heap}}  free: {{free}}  total: {{total}}
+
+(...)
+Done init_simulation() at wall-clock(WC)= {{init_at_wall_clock}}
+
+(...)
+starting simulation time= {{start_simulation_time:float}}
+
+(...)
+Step={{step:int}} t={{t:float}} dt={{dt:float}} cfl={{cfl:float}} WC={{WC:float}} WCtFT={{WCtFT:float}} WCtMS={{WCtMS:float}}
+
+(...)
+Integration stopped: Reached maximum number of steps with step={{max_step:int}}.
+Done integrate_in_time().
+Finalize the simulation.
+Write flow solution.
+Step={{final_step:int}} final-t={{final_t:float}}

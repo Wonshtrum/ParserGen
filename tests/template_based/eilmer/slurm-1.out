@@ -1,0 +1,199 @@
+/var/spool/slurm/job575944/slurm_script: line 0: unalias: getavip: not found
+/var/spool/slurm/job575944/slurm_script: line 0: unalias: hip: not found
+/var/spool/slurm/job575944/slurm_script: line 0: unalias: getavbp: not found
+Eilmer 4.0 compressible-flow simulation code.
+Revision: 363429f
+Compiler-name: dmd
+Build-flavour: debug
+Capabilities: multi-species-gas multi-temperature-gas MHD turbulence.
+Parallelism: MPI-parallel, number of tasks 8
+MPI-parallel, start task 3 on processor node001.cluster
+MPI-parallel, start task 4 on processor node001.cluster
+MPI-parallel, start task 5 on processor node001.cluster
+MPI-parallel, start task 6 on processor node001.cluster
+MPI-parallel, start task 7 on processor node001.cluster
+MPI-parallel, start task 0 on processor node001.cluster
+MPI-parallel, start task 1 on processor node001.cluster
+MPI-parallel, start task 2 on processor node001.cluster
+Begin simulation with command-line arguments.
+  jobName: cone20
+  tindxStart: 7
+  maxWallClock: 432000
+  verbosityLevel: 1
+  threadsPerMPITask: 1
+Begin init_simulation()...
+MPI-task with rank 2 running with 1 threads.
+MPI-task with rank 5 running with 1 threads.
+MPI-task with rank 6 running with 1 threads.
+MPI-task with rank 0 running with 1 threads.
+MPI-task with rank 1 running with 1 threads.
+MPI-task with rank 7 running with 1 threads.
+MPI-task with rank 3 running with 1 threads.
+MPI-task with rank 4 running with 1 threads.
+Heap memory used for task 6: 2.23  free: 9.77  total: 12.0 MB
+Heap memory used for task 1: 2.22  free: 9.78  total: 12.0 MB
+Heap memory used for task 7: 2.22  free: 9.78  total: 12.0 MB
+Heap memory used for task 3: 2.22  free: 9.78  total: 12.0 MB
+Heap memory used for task 5: 2.22  free: 9.78  total: 12.0 MB
+Heap memory used for task 4: 2.23  free: 9.77  total: 12.0 MB
+Heap memory used for task 0: 2.23  free: 9.77  total: 12.0 MB
+Heap memory used for task 2: 2.23  free: 9.77  total: 12.0 MB
+Done init_simulation() at wall-clock(WC)= 0.0 sec
+starting simulation time= 0.00363477
+Integrate in time.
+Step=     20 t= 3.755e-03 dt= 6.003e-06 cfl=0.50 WC=0.2 WCtFT=1.8 WCtMS=26.5
+Step=     40 t= 3.816e-03 dt= 1.000e-07 cfl=0.50 WC=0.2 WCtFT=60.1 WCtMS=15.0
+Step=     60 t= 3.818e-03 dt= 1.000e-07 cfl=0.01 WC=0.2 WCtFT=44.9 WCtMS=11.2
+Step=     80 t= 3.820e-03 dt= 1.000e-07 cfl=0.01 WC=0.3 WCtFT=37.2 WCtMS=9.2
+Step=    100 t= 3.822e-03 dt= 1.000e-07 cfl=0.01 WC=0.3 WCtFT=32.6 WCtMS=8.0
+Step=    120 t= 3.824e-03 dt= 1.000e-07 cfl=0.01 WC=0.3 WCtFT=29.6 WCtMS=7.2
+Step=    140 t= 3.826e-03 dt= 1.000e-07 cfl=0.01 WC=0.3 WCtFT=27.3 WCtMS=6.7
+Step=    160 t= 3.828e-03 dt= 1.000e-07 cfl=0.01 WC=0.4 WCtFT=25.7 WCtMS=6.2
+Step=    180 t= 3.830e-03 dt= 1.000e-07 cfl=0.01 WC=0.4 WCtFT=24.4 WCtMS=5.9
+Step=    200 t= 3.832e-03 dt= 1.000e-07 cfl=0.01 WC=0.4 WCtFT=23.4 WCtMS=5.6
+Step=    220 t= 3.834e-03 dt= 1.000e-07 cfl=0.01 WC=0.4 WCtFT=22.5 WCtMS=5.4
+Step=    240 t= 3.836e-03 dt= 1.000e-07 cfl=0.01 WC=0.5 WCtFT=21.8 WCtMS=5.2
+Step=    260 t= 3.838e-03 dt= 1.000e-07 cfl=0.01 WC=0.5 WCtFT=21.2 WCtMS=5.0
+Step=    280 t= 3.840e-03 dt= 1.000e-07 cfl=0.01 WC=0.5 WCtFT=20.7 WCtMS=4.8
+Step=    300 t= 3.842e-03 dt= 1.000e-07 cfl=0.01 WC=0.5 WCtFT=20.2 WCtMS=4.7
+Step=    320 t= 3.844e-03 dt= 1.000e-07 cfl=0.01 WC=0.5 WCtFT=19.8 WCtMS=4.6
+Step=    340 t= 3.846e-03 dt= 1.000e-07 cfl=0.01 WC=0.6 WCtFT=19.4 WCtMS=4.5
+Step=    360 t= 3.848e-03 dt= 1.000e-07 cfl=0.01 WC=0.6 WCtFT=19.1 WCtMS=4.4
+Step=    380 t= 3.850e-03 dt= 1.000e-07 cfl=0.01 WC=0.6 WCtFT=18.8 WCtMS=4.3
+Step=    400 t= 3.852e-03 dt= 1.000e-07 cfl=0.01 WC=0.6 WCtFT=18.5 WCtMS=4.2
+Step=    420 t= 3.854e-03 dt= 1.000e-07 cfl=0.01 WC=0.7 WCtFT=18.3 WCtMS=4.1
+Step=    440 t= 3.856e-03 dt= 1.000e-07 cfl=0.01 WC=0.7 WCtFT=18.0 WCtMS=4.0
+Step=    460 t= 3.858e-03 dt= 1.000e-07 cfl=0.01 WC=0.7 WCtFT=17.9 WCtMS=4.0
+Step=    480 t= 3.860e-03 dt= 1.000e-07 cfl=0.01 WC=0.7 WCtFT=17.6 WCtMS=3.9
+Step=    500 t= 3.862e-03 dt= 1.000e-07 cfl=0.01 WC=0.8 WCtFT=17.5 WCtMS=3.8
+Step=    520 t= 3.864e-03 dt= 1.000e-07 cfl=0.01 WC=0.8 WCtFT=17.3 WCtMS=3.8
+Step=    540 t= 3.866e-03 dt= 1.000e-07 cfl=0.01 WC=0.8 WCtFT=17.2 WCtMS=3.7
+Step=    560 t= 3.868e-03 dt= 1.000e-07 cfl=0.01 WC=0.8 WCtFT=17.0 WCtMS=3.7
+Step=    580 t= 3.870e-03 dt= 1.000e-07 cfl=0.01 WC=0.9 WCtFT=16.9 WCtMS=3.6
+Step=    600 t= 3.872e-03 dt= 1.000e-07 cfl=0.01 WC=0.9 WCtFT=16.7 WCtMS=3.6
+Step=    620 t= 3.874e-03 dt= 1.000e-07 cfl=0.01 WC=0.9 WCtFT=16.6 WCtMS=3.5
+Step=    640 t= 3.876e-03 dt= 1.000e-07 cfl=0.01 WC=0.9 WCtFT=16.5 WCtMS=3.5
+Step=    660 t= 3.878e-03 dt= 1.000e-07 cfl=0.01 WC=1.0 WCtFT=16.4 WCtMS=3.4
+Step=    680 t= 3.880e-03 dt= 1.000e-07 cfl=0.01 WC=1.0 WCtFT=16.3 WCtMS=3.4
+Step=    700 t= 3.882e-03 dt= 1.000e-07 cfl=0.01 WC=1.0 WCtFT=16.2 WCtMS=3.3
+Step=    720 t= 3.884e-03 dt= 1.000e-07 cfl=0.01 WC=1.0 WCtFT=16.1 WCtMS=3.3
+Step=    740 t= 3.886e-03 dt= 1.000e-07 cfl=0.01 WC=1.1 WCtFT=16.0 WCtMS=3.2
+Step=    760 t= 3.888e-03 dt= 1.000e-07 cfl=0.01 WC=1.1 WCtFT=15.9 WCtMS=3.2
+Step=    780 t= 3.890e-03 dt= 1.000e-07 cfl=0.01 WC=1.1 WCtFT=15.8 WCtMS=3.2
+Step=    800 t= 3.892e-03 dt= 1.000e-07 cfl=0.01 WC=1.1 WCtFT=15.7 WCtMS=3.1
+Step=    820 t= 3.894e-03 dt= 1.000e-07 cfl=0.01 WC=1.2 WCtFT=15.7 WCtMS=3.1
+Step=    840 t= 3.896e-03 dt= 1.000e-07 cfl=0.01 WC=1.2 WCtFT=15.6 WCtMS=3.0
+Step=    860 t= 3.898e-03 dt= 1.000e-07 cfl=0.01 WC=1.2 WCtFT=15.5 WCtMS=3.0
+Step=    880 t= 3.900e-03 dt= 1.000e-07 cfl=0.01 WC=1.2 WCtFT=15.4 WCtMS=3.0
+Step=    900 t= 3.902e-03 dt= 1.000e-07 cfl=0.01 WC=1.3 WCtFT=15.3 WCtMS=2.9
+Step=    920 t= 3.904e-03 dt= 1.000e-07 cfl=0.01 WC=1.3 WCtFT=15.3 WCtMS=2.9
+Step=    940 t= 3.906e-03 dt= 1.000e-07 cfl=0.01 WC=1.3 WCtFT=15.2 WCtMS=2.9
+Step=    960 t= 3.908e-03 dt= 1.000e-07 cfl=0.01 WC=1.3 WCtFT=15.2 WCtMS=2.8
+Step=    980 t= 3.910e-03 dt= 1.000e-07 cfl=0.01 WC=1.4 WCtFT=15.1 WCtMS=2.8
+Step=   1000 t= 3.912e-03 dt= 1.000e-07 cfl=0.01 WC=1.4 WCtFT=15.0 WCtMS=2.8
+Step=   1020 t= 3.914e-03 dt= 1.000e-07 cfl=0.01 WC=1.4 WCtFT=15.0 WCtMS=2.7
+Step=   1040 t= 3.916e-03 dt= 1.000e-07 cfl=0.01 WC=1.4 WCtFT=14.9 WCtMS=2.7
+Step=   1060 t= 3.918e-03 dt= 1.000e-07 cfl=0.01 WC=1.5 WCtFT=14.8 WCtMS=2.7
+Step=   1080 t= 3.920e-03 dt= 1.000e-07 cfl=0.01 WC=1.5 WCtFT=14.8 WCtMS=2.6
+Step=   1100 t= 3.922e-03 dt= 1.000e-07 cfl=0.01 WC=1.5 WCtFT=14.7 WCtMS=2.6
+Step=   1120 t= 3.924e-03 dt= 1.000e-07 cfl=0.01 WC=1.5 WCtFT=14.7 WCtMS=2.6
+Step=   1140 t= 3.926e-03 dt= 1.000e-07 cfl=0.01 WC=1.6 WCtFT=14.6 WCtMS=2.5
+Step=   1160 t= 3.928e-03 dt= 1.000e-07 cfl=0.01 WC=1.6 WCtFT=14.6 WCtMS=2.5
+Step=   1180 t= 3.930e-03 dt= 1.000e-07 cfl=0.01 WC=1.6 WCtFT=14.5 WCtMS=2.5
+Step=   1200 t= 3.932e-03 dt= 1.000e-07 cfl=0.01 WC=1.6 WCtFT=14.5 WCtMS=2.4
+Step=   1220 t= 3.934e-03 dt= 1.000e-07 cfl=0.01 WC=1.6 WCtFT=14.4 WCtMS=2.4
+Step=   1240 t= 3.936e-03 dt= 1.000e-07 cfl=0.01 WC=1.7 WCtFT=14.4 WCtMS=2.4
+Step=   1260 t= 3.938e-03 dt= 1.000e-07 cfl=0.01 WC=1.7 WCtFT=14.3 WCtMS=2.3
+Step=   1280 t= 3.940e-03 dt= 1.000e-07 cfl=0.01 WC=1.7 WCtFT=14.3 WCtMS=2.3
+Step=   1300 t= 3.942e-03 dt= 1.000e-07 cfl=0.01 WC=1.7 WCtFT=14.2 WCtMS=2.3
+Step=   1320 t= 3.944e-03 dt= 1.000e-07 cfl=0.01 WC=1.8 WCtFT=14.2 WCtMS=2.3
+Step=   1340 t= 3.946e-03 dt= 1.000e-07 cfl=0.01 WC=1.8 WCtFT=14.1 WCtMS=2.2
+Step=   1360 t= 3.948e-03 dt= 1.000e-07 cfl=0.01 WC=1.8 WCtFT=14.1 WCtMS=2.2
+Step=   1380 t= 3.950e-03 dt= 1.000e-07 cfl=0.01 WC=1.8 WCtFT=14.1 WCtMS=2.2
+Step=   1400 t= 3.952e-03 dt= 1.000e-07 cfl=0.01 WC=1.9 WCtFT=14.0 WCtMS=2.1
+Step=   1420 t= 3.954e-03 dt= 1.000e-07 cfl=0.01 WC=1.9 WCtFT=14.0 WCtMS=2.1
+Step=   1440 t= 3.956e-03 dt= 1.000e-07 cfl=0.01 WC=1.9 WCtFT=13.9 WCtMS=2.1
+Step=   1460 t= 3.958e-03 dt= 1.000e-07 cfl=0.01 WC=1.9 WCtFT=13.9 WCtMS=2.1
+Step=   1480 t= 3.960e-03 dt= 1.000e-07 cfl=0.01 WC=2.0 WCtFT=13.8 WCtMS=2.0
+Step=   1500 t= 3.962e-03 dt= 1.000e-07 cfl=0.01 WC=2.0 WCtFT=13.8 WCtMS=2.0
+Step=   1520 t= 3.964e-03 dt= 1.000e-07 cfl=0.01 WC=2.0 WCtFT=13.8 WCtMS=2.0
+Step=   1540 t= 3.966e-03 dt= 1.000e-07 cfl=0.01 WC=2.0 WCtFT=13.7 WCtMS=1.9
+Step=   1560 t= 3.968e-03 dt= 1.000e-07 cfl=0.01 WC=2.1 WCtFT=13.7 WCtMS=1.9
+Step=   1580 t= 3.970e-03 dt= 1.000e-07 cfl=0.01 WC=2.1 WCtFT=13.6 WCtMS=1.9
+Step=   1600 t= 3.972e-03 dt= 1.000e-07 cfl=0.01 WC=2.1 WCtFT=13.6 WCtMS=1.9
+Step=   1620 t= 3.974e-03 dt= 1.000e-07 cfl=0.01 WC=2.1 WCtFT=13.6 WCtMS=1.8
+Step=   1640 t= 3.976e-03 dt= 1.000e-07 cfl=0.01 WC=2.2 WCtFT=13.5 WCtMS=1.8
+Step=   1660 t= 3.978e-03 dt= 1.000e-07 cfl=0.01 WC=2.2 WCtFT=13.5 WCtMS=1.8
+Step=   1680 t= 3.980e-03 dt= 1.000e-07 cfl=0.01 WC=2.2 WCtFT=13.5 WCtMS=1.7
+Step=   1700 t= 3.982e-03 dt= 1.000e-07 cfl=0.01 WC=2.2 WCtFT=13.4 WCtMS=1.7
+Step=   1720 t= 3.984e-03 dt= 1.000e-07 cfl=0.01 WC=2.3 WCtFT=13.4 WCtMS=1.7
+Step=   1740 t= 3.986e-03 dt= 1.000e-07 cfl=0.01 WC=2.3 WCtFT=13.3 WCtMS=1.7
+Step=   1760 t= 3.988e-03 dt= 1.000e-07 cfl=0.01 WC=2.3 WCtFT=13.3 WCtMS=1.6
+Step=   1780 t= 3.990e-03 dt= 1.000e-07 cfl=0.01 WC=2.3 WCtFT=13.3 WCtMS=1.6
+Step=   1800 t= 3.992e-03 dt= 1.000e-07 cfl=0.01 WC=2.4 WCtFT=13.2 WCtMS=1.6
+Step=   1820 t= 3.994e-03 dt= 1.000e-07 cfl=0.01 WC=2.4 WCtFT=13.2 WCtMS=1.5
+Step=   1840 t= 3.996e-03 dt= 1.000e-07 cfl=0.01 WC=2.4 WCtFT=13.2 WCtMS=1.5
+Step=   1860 t= 3.998e-03 dt= 1.000e-07 cfl=0.01 WC=2.4 WCtFT=13.1 WCtMS=1.5
+Step=   1880 t= 4.000e-03 dt= 1.000e-07 cfl=0.01 WC=2.5 WCtFT=13.1 WCtMS=1.5
+Step=   1900 t= 4.002e-03 dt= 1.000e-07 cfl=0.01 WC=2.5 WCtFT=13.1 WCtMS=1.4
+Step=   1920 t= 4.004e-03 dt= 1.000e-07 cfl=0.01 WC=2.5 WCtFT=13.0 WCtMS=1.4
+Step=   1940 t= 4.006e-03 dt= 1.000e-07 cfl=0.01 WC=2.5 WCtFT=13.0 WCtMS=1.4
+Step=   1960 t= 4.008e-03 dt= 1.000e-07 cfl=0.01 WC=2.6 WCtFT=13.0 WCtMS=1.4
+Step=   1980 t= 4.010e-03 dt= 1.000e-07 cfl=0.01 WC=2.6 WCtFT=12.9 WCtMS=1.3
+Step=   2000 t= 4.012e-03 dt= 1.000e-07 cfl=0.01 WC=2.6 WCtFT=12.9 WCtMS=1.3
+Step=   2020 t= 4.014e-03 dt= 1.000e-07 cfl=0.01 WC=2.6 WCtFT=12.9 WCtMS=1.3
+Step=   2040 t= 4.016e-03 dt= 1.000e-07 cfl=0.01 WC=2.7 WCtFT=12.8 WCtMS=1.3
+Step=   2060 t= 4.018e-03 dt= 1.000e-07 cfl=0.01 WC=2.7 WCtFT=12.8 WCtMS=1.2
+Step=   2080 t= 4.020e-03 dt= 1.000e-07 cfl=0.01 WC=2.7 WCtFT=12.8 WCtMS=1.2
+Step=   2100 t= 4.022e-03 dt= 1.000e-07 cfl=0.01 WC=2.7 WCtFT=12.7 WCtMS=1.2
+Step=   2120 t= 4.024e-03 dt= 1.000e-07 cfl=0.01 WC=2.8 WCtFT=12.7 WCtMS=1.1
+Step=   2140 t= 4.026e-03 dt= 1.000e-07 cfl=0.01 WC=2.8 WCtFT=12.7 WCtMS=1.1
+Step=   2160 t= 4.028e-03 dt= 1.000e-07 cfl=0.01 WC=2.8 WCtFT=12.6 WCtMS=1.1
+Step=   2180 t= 4.030e-03 dt= 1.000e-07 cfl=0.01 WC=2.8 WCtFT=12.6 WCtMS=1.1
+Step=   2200 t= 4.032e-03 dt= 1.000e-07 cfl=0.01 WC=2.9 WCtFT=12.6 WCtMS=1.0
+Step=   2220 t= 4.034e-03 dt= 1.000e-07 cfl=0.01 WC=2.9 WCtFT=12.5 WCtMS=1.0
+Step=   2240 t= 4.036e-03 dt= 1.000e-07 cfl=0.01 WC=2.9 WCtFT=12.5 WCtMS=1.0
+Step=   2260 t= 4.038e-03 dt= 1.000e-07 cfl=0.01 WC=2.9 WCtFT=12.5 WCtMS=1.0
+Step=   2280 t= 4.040e-03 dt= 1.000e-07 cfl=0.01 WC=3.0 WCtFT=12.4 WCtMS=0.9
+Step=   2300 t= 4.042e-03 dt= 1.000e-07 cfl=0.01 WC=3.0 WCtFT=12.4 WCtMS=0.9
+Step=   2320 t= 4.044e-03 dt= 1.000e-07 cfl=0.01 WC=3.0 WCtFT=12.4 WCtMS=0.9
+Step=   2340 t= 4.046e-03 dt= 1.000e-07 cfl=0.01 WC=3.0 WCtFT=12.3 WCtMS=0.9
+Step=   2360 t= 4.048e-03 dt= 1.000e-07 cfl=0.01 WC=3.1 WCtFT=12.3 WCtMS=0.8
+Step=   2380 t= 4.050e-03 dt= 1.000e-07 cfl=0.01 WC=3.1 WCtFT=12.3 WCtMS=0.8
+Step=   2400 t= 4.052e-03 dt= 1.000e-07 cfl=0.01 WC=3.1 WCtFT=12.3 WCtMS=0.8
+Step=   2420 t= 4.054e-03 dt= 1.000e-07 cfl=0.01 WC=3.1 WCtFT=12.2 WCtMS=0.7
+Step=   2440 t= 4.056e-03 dt= 1.000e-07 cfl=0.01 WC=3.2 WCtFT=12.2 WCtMS=0.7
+Step=   2460 t= 4.058e-03 dt= 1.000e-07 cfl=0.01 WC=3.2 WCtFT=12.2 WCtMS=0.7
+Step=   2480 t= 4.060e-03 dt= 1.000e-07 cfl=0.01 WC=3.2 WCtFT=12.1 WCtMS=0.7
+Step=   2500 t= 4.062e-03 dt= 1.000e-07 cfl=0.01 WC=3.2 WCtFT=12.1 WCtMS=0.6
+Step=   2520 t= 4.064e-03 dt= 1.000e-07 cfl=0.01 WC=3.2 WCtFT=12.1 WCtMS=0.6
+Step=   2540 t= 4.066e-03 dt= 1.000e-07 cfl=0.01 WC=3.3 WCtFT=12.0 WCtMS=0.6
+Step=   2560 t= 4.068e-03 dt= 1.000e-07 cfl=0.01 WC=3.3 WCtFT=12.0 WCtMS=0.6
+Step=   2580 t= 4.070e-03 dt= 1.000e-07 cfl=0.01 WC=3.3 WCtFT=12.0 WCtMS=0.5
+Step=   2600 t= 4.072e-03 dt= 1.000e-07 cfl=0.01 WC=3.3 WCtFT=11.9 WCtMS=0.5
+Step=   2620 t= 4.074e-03 dt= 1.000e-07 cfl=0.01 WC=3.4 WCtFT=11.9 WCtMS=0.5
+Step=   2640 t= 4.076e-03 dt= 1.000e-07 cfl=0.01 WC=3.4 WCtFT=11.9 WCtMS=0.5
+Step=   2660 t= 4.078e-03 dt= 1.000e-07 cfl=0.01 WC=3.4 WCtFT=11.9 WCtMS=0.4
+Step=   2680 t= 4.080e-03 dt= 1.000e-07 cfl=0.01 WC=3.4 WCtFT=11.8 WCtMS=0.4
+Step=   2700 t= 4.082e-03 dt= 1.000e-07 cfl=0.01 WC=3.5 WCtFT=11.8 WCtMS=0.4
+Step=   2720 t= 4.084e-03 dt= 1.000e-07 cfl=0.01 WC=3.5 WCtFT=11.8 WCtMS=0.4
+Step=   2740 t= 4.086e-03 dt= 1.000e-07 cfl=0.01 WC=3.5 WCtFT=11.7 WCtMS=0.3
+Step=   2760 t= 4.088e-03 dt= 1.000e-07 cfl=0.01 WC=3.5 WCtFT=11.7 WCtMS=0.3
+Step=   2780 t= 4.090e-03 dt= 1.000e-07 cfl=0.01 WC=3.6 WCtFT=11.7 WCtMS=0.3
+Step=   2800 t= 4.092e-03 dt= 1.000e-07 cfl=0.01 WC=3.6 WCtFT=11.7 WCtMS=0.3
+Step=   2820 t= 4.094e-03 dt= 1.000e-07 cfl=0.01 WC=3.6 WCtFT=11.6 WCtMS=0.2
+Step=   2840 t= 4.096e-03 dt= 1.000e-07 cfl=0.01 WC=3.6 WCtFT=11.6 WCtMS=0.2
+Step=   2860 t= 4.098e-03 dt= 1.000e-07 cfl=0.01 WC=3.7 WCtFT=11.6 WCtMS=0.2
+Step=   2880 t= 4.100e-03 dt= 1.000e-07 cfl=0.01 WC=3.7 WCtFT=11.5 WCtMS=0.2
+Step=   2900 t= 4.102e-03 dt= 1.000e-07 cfl=0.01 WC=3.7 WCtFT=11.5 WCtMS=0.1
+Step=   2920 t= 4.104e-03 dt= 1.000e-07 cfl=0.01 WC=3.7 WCtFT=11.5 WCtMS=0.1
+Step=   2940 t= 4.106e-03 dt= 1.000e-07 cfl=0.01 WC=3.8 WCtFT=11.5 WCtMS=0.1
+Step=   2960 t= 4.108e-03 dt= 1.000e-07 cfl=0.01 WC=3.8 WCtFT=11.4 WCtMS=0.1
+Step=   2980 t= 4.110e-03 dt= 1.000e-07 cfl=0.01 WC=3.8 WCtFT=11.4 WCtMS=0.0
+Step=   3000 t= 4.112e-03 dt= 1.000e-07 cfl=0.01 WC=3.8 WCtFT=11.4 WCtMS=0.0
+Integration stopped: Reached maximum number of steps with step=3000.
+Done integrate_in_time().
+Finalize the simulation.
+Write flow solution.
+Step= 3000 final-t= 0.00411186
+Done.

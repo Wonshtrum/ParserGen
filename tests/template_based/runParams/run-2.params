@@ -1,0 +1,67 @@
+$RUN-CONTROL
+  solver_type = ns
+  diffusion_scheme = FE_2delta
+  simulation_end_iteration = 200000
+  mixture_name =  CH4-AIR-2S-BFER_PREMIX
+  reactive_flow  = no
+  combustion_model = no
+  equation_of_state = pg
+  LES_model = wale
+  prandtl_turb =   0.65000000D+00
+  schmidt_turb =   0.65000000D+00
+  convection_scheme = LW
+  CFL =   0.70000000D+00
+  Fourier =   0.10000000D+00
+  compute_chemical_timestep = no
+  artificial_viscosity_model = Colin_species
+  artificial_viscosity_2nd_order =   2.00000000D-02
+  artificial_viscosity_4th_order =   0.50000000D-02
+  clip_species = no
+$end_RUN-CONTROL
+ 
+$INPUT-CONTROL
+  mesh_file = ../MESH/trappedvtx.mesh.h5
+  asciibound_file = ../MESH/trappedvtx.asciiBound
+  solutbound_file = ../SOLUTBOUND/perso.solutBound.h5
+  initial_solution_file = ../INIT/init.h5
+  probe_file = record.dat
+  species_database = species_database.dat
+  mixture_database = mixture_database.dat
+$end_INPUT-CONTROL
+ 
+$OUTPUT-CONTROL
+  save_solution = yes
+  save_solution.iteration = 20000
+  save_solution.name = ./SOLUT/solut
+  save_solution.additional = minimum
+  save_temporal = yes
+  save_temporal.balance = yes
+  save_temporal.iteration = 50
+  save_temporal.dirname = ./TEMPORAL/
+  save_average = no
+  save_rrate_ARC = no
+$end_OUTPUT-CONTROL
+ 
+$HPC-DEBUG
+  ncell_group = 100
+  debug_level = 0
+  debug_processor = master
+  auto_reorder_boundary_patch = yes
+  reordering_method = natural
+  use_el2part = yes
+  check_el2part_consistency = yes
+  partitioner = parmetis
+$end_HPC-DEBUG
+
+$SPONGE-LAYER 
+  sponge_layer.activate = yes 
+  X_lowest_point = 1.50000000d-01 
+  Y_lowest_point = 5.00000000d-02 
+  Z_lowest_point = -8.00000000d-02 
+  X_highest_point = 2.50000000d-01 
+  Y_highest_point = 1.50000000d-01 
+  Z_highest_point = 8.00000000d-02 
+  space_step = 1.00000000d-02 
+  artificial_viscosity_coeff =
+1.00000000d+00
+$end_SPONGE-LAYER
