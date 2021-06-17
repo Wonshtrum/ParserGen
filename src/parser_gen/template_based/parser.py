@@ -5,7 +5,7 @@ def add_var(variables):
 	def wrapper(name, processor_name):
 		processor = eval(processor_name) if processor_name is not None else None
 		variables.append((name, processor, processor_name))
-		return r"(\S.*\S|\S)"
+		return r"(\S.*?\S|\S)"
 	return wrapper
 
 def _multi_repl(bulk, n, repl):
@@ -13,18 +13,18 @@ def _multi_repl(bulk, n, repl):
 		res = repl
 		repl = lambda *args: res
 	return [bulk[0]]+[_
-	for *sep, text in zip(*[iter(bulk[1:])]*(n+1))
-	for _ in (repl(*sep), text)]
+		for *sep, text in zip(*[iter(bulk[1:])]*(n+1))
+		for _ in (repl(*sep), text)]
 
 def multi_repl(pattern, repl, bulk):
 	n = re.compile(pattern).groups
 	return [_
-	for i, element in enumerate(bulk)
-	for _ in ([element] if i%2 else
-	_multi_repl(re.split(pattern, element), n, repl))]
+		for i, element in enumerate(bulk)
+		for _ in ([element] if i%2 else
+		_multi_repl(re.split(pattern, element), n, repl))]
 
 def repeat_char(x):
-	return f"{re.escape(x)}{{3}}"
+	return f"{re.escape(x)}{{2,}}"
 
 def add_spaces(x):
 	return f" {x.group()} "
@@ -34,7 +34,7 @@ def gen_regex(block):
 	block = re.sub(r"{{.*?}}", add_spaces, block)
 	block = [block.strip()]
 	patterns = [
-		(r"{{}}", r".+?"),
+		(r"{{\s*}}", r".+?"),
 		(r"{{\s*(\w+)(?:\s*:\s*(\w+))?\s*}}", add_var(variables)),
 		(r"[+-]?\d+(?:\.\d+)?(?:[EeDd][+-]?\d+)?", r"\S+"),
 		(r"\s+", r"\s*"),
